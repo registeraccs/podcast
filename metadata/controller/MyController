@@ -1,0 +1,34 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "2df07941-2228-41eb-87fe-7243f9c73218",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSignupTap",
+                "implHandler": [
+                    "Ext.Viewport.setActiveItem({\r",
+                    "    xtype: 'mainview'\r",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#signup"
+            },
+            "designerId": "5f31e1a1-cdaa-4cbb-bbd7-ea51aa9467e6"
+        }
+    ]
+}

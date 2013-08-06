@@ -1,0 +1,49 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Podcast",
+        "designer|userAlias": "podcast"
+    },
+    "designerId": "17a25189-f914-460b-a9a8-92762b013e49",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "style": [
+                    "border: none;\r",
+                    "background: #8fced6;"
+                ]
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "02e7d012-c11c-4766-b2aa-c2ee3eb0c273",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "placeHolder": "Seach"
+                    },
+                    "designerId": "8e72228e-cf58-407f-8850-0a68d941bd49"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": null,
+        "designer|userClassName": "MainView",
+        "designer|userAlias": "mainview"
+    },
+    "designerId": "de86ac27-3d9e-4aee-a3e0-773694009a17",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "baseCls": "x-navigation",
+                "docked": "top"
+            },
+            "designerId": "e64c5225-388b-4c0f-bab2-305842234c71",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "iconCls": "team",
+                        "text": ""
+                    },
+                    "designerId": "ce939530-a1d4-4487-8f1d-ec89f87c6377"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Podcast"
+            },
+            "designerId": "390ddcf4-6f3d-4d9a-a952-d828090fa6a9",
+            "masterInstanceId": "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db"
+        }
+    ]
+}

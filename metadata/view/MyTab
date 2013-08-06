@@ -1,0 +1,55 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyTab",
+        "designer|userAlias": "mytab"
+    },
+    "designerId": "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "style": "background: #fff;"
+            },
+            "designerId": "1e687cdb-b5d5-4cf8-bed6-0839ac8b9a78"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null,
+                "iconCls": "music"
+            },
+            "designerId": "5a48da18-c25f-45ef-b4b9-5c327f5a11be",
+            "masterInstanceId": "17a25189-f914-460b-a9a8-92762b013e49"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "settings"
+            },
+            "designerId": "4054ce89-5582-4a27-92f6-ad86da00d91d",
+            "masterInstanceId": "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2"
+        }
+    ]
+}

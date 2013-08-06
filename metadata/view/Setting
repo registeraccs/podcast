@@ -1,0 +1,28 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Setting",
+        "designer|userAlias": "setting"
+    },
+    "designerId": "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
+    "cn": [
+        {
+            "type": "Ext.field.Toggle",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Daily Mail Digest",
+                "labelWidth": "60%"
+            },
+            "designerId": "e9c144ca-7d2d-4376-a666-14bb9f943278"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+.x-navigation {
+	border: none;
+	background: #fff;
+	.x-innerhtml {
+		color: #f25260;
+		font-size: 16px;
+	}
+}
+
+.x-toolbar {
+	border: none;
+	background: #8fced6;
+}
+
+.x-tab{
+	min-width: 50%;
+}
+.x-tabbar-dark.x-docked-bottom .x-tab{
+	text-shadow: none;
+}
+.x-tabbar-dark.x-docked-bottom .x-tab-active .x-button-icon:before{
+	color: #fff;
+}
+.x-tabbar-dark .x-tab{
+	color: #2d5f73;
+}
+.x-tabbar.x-docked-bottom .x-tab{
+	border-radius: 0;
+	padding-top: 10px;
+}
+.x-tabbar-dark.x-docked-bottom .x-tab-active{
+	background-color: #2d5f73;
+}

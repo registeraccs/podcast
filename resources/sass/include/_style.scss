@@ -1,0 +1,42 @@
+.login-view {
+    @include background-image(#eeeeee);
+    
+    /*
+     * Logo
+     */
+    .logo {
+        background: transparent url('../images/logo.png') no-repeat center center;
+        background-size: 156px 157px;
+        width: 156px;
+        height: 157px;
+    }
+    
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .logo {
+            background-image: url('../images/logo@2x.png');
+        }
+    }
+    
+    /**
+     * Buttons
+     */
+    .login-btn {
+        background: transparent url('../images/login.png') no-repeat center center;
+        background-size: 200px 43px;
+        width: 200px;
+        height: 43px;
+    }
+    
+    .signup-btn {
+        background: transparent url('../images/signup.png') no-repeat center center;
+        background-size: 200px 43px;
+        width: 200px;
+        height: 43px    ;
+    }
+    
+    .help-line {
+        border-top: 1px solid #819dc6;
+        width: 3em;
+        margin-bottom: 1em;
+    }
+}

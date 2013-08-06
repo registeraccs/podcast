@@ -1,0 +1,140 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "container|pack": "center",
+        "cls": [
+            "login-view"
+        ],
+        "itemId": null,
+        "style": null,
+        "designer|userClassName": "Login",
+        "designer|userAlias": "login",
+        "designer|initialView": true,
+        "layout": "vbox"
+    },
+    "designerId": "672d8408-6860-4256-b613-9740f2efcbfb",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": "40%",
+                "itemId": "mycontainer",
+                "margin": "0 0 30 0",
+                "style": "background: #8fced6",
+                "width": "100%",
+                "designer|displayName": "top"
+            },
+            "designerId": "53d79e3c-a7f3-474a-bd15-f6e24f4dd557",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "cls": [
+                            "logo"
+                        ],
+                        "id": null,
+                        "itemId": null,
+                        "designer|displayName": "logo"
+                    },
+                    "designerId": "204ae91a-4d42-4328-9294-80511a406311"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad veniam, quis nostrud exercitation ullamco",
+                "margin": "0 40 -60 40",
+                "style": [
+                    "text-align: center;\r",
+                    "color: #555555;\r",
+                    "font-size: 12px;"
+                ],
+                "ui": null,
+                "designer|displayName": "statictext"
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "176a1375-99e3-4eb9-9ac2-5483dc9b9d33"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "cls": [
+                    "signup-btn"
+                ],
+                "docked": null,
+                "itemId": "signup",
+                "margin": "0 0 10 0",
+                "designer|displayName": "signup",
+                "text": ""
+            },
+            "designerId": "92244b23-7f05-4bac-b0cf-a040bba9c167"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "login-btn"
+                ],
+                "docked": null,
+                "itemId": "signin",
+                "margin": null,
+                "designer|displayName": "login",
+                "text": ""
+            },
+            "designerId": "a16d1bd2-43e6-406f-88d4-e091e2ede973",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSigninTap",
+                        "name": "tap"
+                    },
+                    "designerId": "c88c8542-8258-4052-8c88-8250d3e4fd54"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "name": "podcast",
+    "settings": {
+        "urlPrefix": "http://app.dev/senchatouch/podcast/",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "672d8408-6860-4256-b613-9740f2efcbfb": {
+            "paths": [
+                "metadata/view/Login",
+                "app/view/override/Login.js",
+                "app/view/Login.js"
+            ],
+            "className": "Login"
+        },
+        "d25c9222-c686-43ce-9c8e-50f0e5113e42": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "513c907b-b5f2-4df3-9508-faf496b5993a": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "de86ac27-3d9e-4aee-a3e0-773694009a17": {
+            "paths": [
+                "metadata/view/MainView",
+                "app/view/override/MainView.js",
+                "app/view/MainView.js"
+            ],
+            "className": "MainView"
+        },
+        "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db": {
+            "paths": [
+                "metadata/view/MyTab",
+                "app/view/override/MyTab.js",
+                "app/view/MyTab.js"
+            ],
+            "className": "MyTab"
+        },
+        "17a25189-f914-460b-a9a8-92762b013e49": {
+            "paths": [
+                "metadata/view/Podcast",
+                "app/view/override/Podcast.js",
+                "app/view/Podcast.js"
+            ],
+            "className": "Podcast"
+        },
+        "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2": {
+            "paths": [
+                "metadata/view/Setting",
+                "app/view/override/Setting.js",
+                "app/view/Setting.js"
+            ],
+            "className": "Setting"
+        },
+        "2df07941-2228-41eb-87fe-7243f9c73218": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "672d8408-6860-4256-b613-9740f2efcbfb",
+            "de86ac27-3d9e-4aee-a3e0-773694009a17",
+            "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db",
+            "17a25189-f914-460b-a9a8-92762b013e49",
+            "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2"
+        ],
+        "store": [],
+        "controller": [
+            "2df07941-2228-41eb-87fe-7243f9c73218"
+        ],
+        "model": [],
+        "resource": [
+            "d25c9222-c686-43ce-9c8e-50f0e5113e42",
+            "513c907b-b5f2-4df3-9508-faf496b5993a"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
