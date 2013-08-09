@@ -34,7 +34,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "iconCls": "team",
+                        "iconCls": "compose",
                         "text": ""
                     },
                     "designerId": "ce939530-a1d4-4487-8f1d-ec89f87c6377"

@@ -69,6 +69,22 @@
                 "app/controller/MyController.js"
             ],
             "className": "MyController"
+        },
+        "0ec2f1ad-921e-40de-b7bf-cefda33ba549": {
+            "paths": [
+                "metadata/view/Library",
+                "app/view/override/Library.js",
+                "app/view/Library.js"
+            ],
+            "className": "Library"
+        },
+        "046a2eff-8f2e-4065-9160-89a38a578f9f": {
+            "paths": [
+                "metadata/store/PodcastStore",
+                "app/store/override/PodcastStore.js",
+                "app/store/PodcastStore.js"
+            ],
+            "className": "PodcastStore"
         }
     },
     "viewOrderMap": {
@@ -77,9 +93,12 @@
             "de86ac27-3d9e-4aee-a3e0-773694009a17",
             "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db",
             "17a25189-f914-460b-a9a8-92762b013e49",
+            "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
             "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2"
         ],
-        "store": [],
+        "store": [
+            "046a2eff-8f2e-4065-9160-89a38a578f9f"
+        ],
         "controller": [
             "2df07941-2228-41eb-87fe-7243f9c73218"
         ],

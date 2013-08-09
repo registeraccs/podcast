@@ -19,6 +19,7 @@ Ext.define('MyApp.view.MyTab', {
 
     requires: [
         'MyApp.view.Podcast',
+        'MyApp.view.Library',
         'MyApp.view.Setting'
     ],
 
@@ -33,7 +34,13 @@ Ext.define('MyApp.view.MyTab', {
                 iconCls: 'music'
             },
             {
+                xtype: 'library',
+                title: 'Library',
+                iconCls: 'list'
+            },
+            {
                 xtype: 'setting',
+                title: 'Setting',
                 iconCls: 'settings'
             }
         ]

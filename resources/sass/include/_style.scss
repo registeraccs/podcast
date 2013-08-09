@@ -40,3 +40,18 @@
         margin-bottom: 1em;
     }
 }
+.photo {
+    float:left;
+    margin:0 8px 16px 0;
+    border:1px solid #ccc;
+    -webkit-box-shadow: 0 2px 4px #777;
+}
+.pview{
+    float: left;
+    margin: 5px 0 0 5px;
+    padding: 0;
+    border: 1px solid #9AD9ED;
+    -webkit-box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
+    -moz-box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
+    box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
+}

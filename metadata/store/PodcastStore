@@ -1,0 +1,85 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[\r",
+            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
+            "\t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/Tz0vtUWDjb_u-XkrRbv5EA/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
+            "  \t{ photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/wv7XY2ENy4HD6ZufRCnXvA/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
+            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
+            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/KGV5uYP6ptUfls13ZlsEfg/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
+            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
+            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
+            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
+            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/K_23zz6O6SeN1gX8Y5h8hA/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
+            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/bJT-SPJrjTIi6K8ehqwnXQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
+            "  \t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
+            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/KtdHatgh-koBoQ9HrpNWLA/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
+            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/d_osp98Jw_sdLNyOqeitbQ/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
+            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
+            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
+            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
+            "]"
+        ],
+        "storeId": "PodcastStore",
+        "designer|userClassName": "PodcastStore",
+        "designer|userAlias": "podcaststore"
+    },
+    "designerId": "046a2eff-8f2e-4065-9160-89a38a578f9f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_url"
+            },
+            "designerId": "a0354acd-5d68-4480-87bc-51ef03c946ca"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "64a78de0-3404-44ca-8de8-f356d3195c89"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rating_img_url_small"
+            },
+            "designerId": "9909cae2-058a-46cb-811e-def7756fd0f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address1"
+            },
+            "designerId": "c260400e-0798-46f8-909c-942bbdd4f2b0"
+        }
+    ]
+}

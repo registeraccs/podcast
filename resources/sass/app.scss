@@ -1,13 +1,17 @@
-@import 'compass/css3';
+// @import 'compass/css3';
 @import url(http://fonts.googleapis.com/css?family=Rambla:700);
-
-// use custom web font as default
 $font-family: 'Rambla', sans-serif !default;
 
-// @import 'sencha-touch/default';
-// @import 'sencha-touch/default/all';
+// $base-color: #666;
+// $page-bg-color: #666;
+$base-gradient: 'glossy';
+$include-default-icons:false;
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
 // @import 'sencha-touch/base';
 // @import 'sencha-touch/base/all';
+@include icon('music');
 @import 'include/buttons';
 @import 'include/tabs';
 @import 'include/titlebar';

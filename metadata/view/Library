@@ -1,0 +1,27 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Library",
+        "designer|userAlias": "library"
+    },
+    "designerId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "text": "MyButton3"
+            },
+            "designerId": "6c716672-95cf-438f-92d6-27e235418037"
+        }
+    ]
+}

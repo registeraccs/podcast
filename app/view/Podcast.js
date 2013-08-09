@@ -18,20 +18,130 @@ Ext.define('MyApp.view.Podcast', {
     alias: 'widget.podcast',
 
     config: {
+        ui: '',
+        layout: {
+            type: 'vbox'
+        },
         items: [
             {
                 xtype: 'toolbar',
+                flex: 1,
                 docked: 'top',
                 style: 'border: none;\r\nbackground: #8fced6;',
+                layout: {
+                    align: 'center',
+                    pack: 'center',
+                    type: 'hbox'
+                },
                 items: [
                     {
                         xtype: 'searchfield',
-                        label: '',
-                        placeHolder: 'Seach'
+                        docked: 'left',
+                        width: 200,
+                        label: ''
+                    },
+                    {
+                        xtype: 'segmentedbutton',
+                        centered: true,
+                        disabled: false,
+                        docked: 'right',
+                        itemId: 'segmentbtn',
+                        ui: 'light',
+                        hideOnMaskTap: false,
+                        scrollable: false,
+                        layout: {
+                            align: 'end',
+                            pack: 'end',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                docked: 'left',
+                                itemId: 'listbtn',
+                                ui: 'plain',
+                                iconCls: 'favorites',
+                                text: ''
+                            },
+                            {
+                                xtype: 'button',
+                                docked: 'right',
+                                itemId: 'boxbtn',
+                                ui: 'plain',
+                                iconCls: 'action',
+                                text: ''
+                            }
+                        ],
+                        listeners: [
+                            {
+                                fn: function(component, eOpts) {
+                                    var me = this;
+                                    me.setPressedButtons(0);
+                                },
+                                event: 'initialize'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                flex: 1,
+                itemId: 'podcastcontent',
+                ui: '',
+                layout: {
+                    animation: 'flip',
+                    type: 'card'
+                },
+                items: [
+                    {
+                        xtype: 'list',
+                        scrollable: 'vertical',
+                        itemTpl: [
+                            '<img class="photo" src="{photo_url}" width="40" height="40"/>',
+                            '{name}<br/>',
+                            '<img src="{rating_img_url_small}"/>&nbsp;',
+                            '<small>{address1}</small>'
+                        ],
+                        store: 'PodcastStore'
+                    },
+                    {
+                        xtype: 'dataview',
+                        margin: 5,
+                        ui: '',
+                        scrollable: 'vertical',
+                        itemTpl: [
+                            '<img class="pview" src="{photo_url}" width="90"/>'
+                        ],
+                        store: 'PodcastStore'
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onListbtnTap',
+                event: 'tap',
+                delegate: '#listbtn'
+            },
+            {
+                fn: 'onBoxbtnTap',
+                event: 'tap',
+                delegate: '#boxbtn'
+            }
         ]
+    },
+
+    onListbtnTap: function(button, e, eOpts) {
+        var me = this;
+        var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];
+        podcastcontent.setActiveItem(0);
+    },
+
+    onBoxbtnTap: function(button, e, eOpts) {
+        var me = this;
+        var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];
+        podcastcontent.setActiveItem(1);
     }
 
 });

@@ -6,8 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "ui": "",
         "designer|userClassName": "Podcast",
-        "designer|userAlias": "podcast"
+        "designer|userAlias": "podcast",
+        "layout": "vbox"
     },
     "designerId": "17a25189-f914-460b-a9a8-92762b013e49",
     "cn": [
@@ -19,7 +21,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": 1,
+                "container|align": "center",
+                "container|pack": "center",
                 "docked": "top",
+                "height": null,
                 "style": [
                     "border: none;\r",
                     "background: #8fced6;"
@@ -38,10 +44,222 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": "",
-                        "placeHolder": "Seach"
+                        "centered": null,
+                        "docked": "left",
+                        "width": 200,
+                        "label": ""
                     },
-                    "designerId": "8e72228e-cf58-407f-8850-0a68d941bd49"
+                    "designerId": "5d702fd1-82e4-4330-8843-52f402c5a041"
+                },
+                {
+                    "type": "Ext.SegmentedButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "container|align": "end",
+                        "container|pack": "end",
+                        "centered": true,
+                        "disabled": false,
+                        "docked": "right",
+                        "height": null,
+                        "itemId": "segmentbtn",
+                        "right": null,
+                        "ui": "light",
+                        "hideOnMaskTap": false,
+                        "scrollable": false
+                    },
+                    "designerId": "64dad0dc-2dc8-409c-9a57-093fdad1a61b",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "left",
+                                "itemId": "listbtn",
+                                "ui": "plain",
+                                "designer|displayName": "List",
+                                "iconCls": "favorites",
+                                "text": ""
+                            },
+                            "designerId": "93df79ac-676f-45db-884f-0c9c95662c28",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onListbtnTap",
+                                        "implHandler": [
+                                            "var me = this;\r",
+                                            "var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];\r",
+                                            "podcastcontent.setActiveItem(0);"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "1989e727-f9c6-4874-b25b-7a50ea4accb9"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "right",
+                                "itemId": "boxbtn",
+                                "ui": "plain",
+                                "designer|displayName": "Box",
+                                "iconCls": "action",
+                                "text": ""
+                            },
+                            "designerId": "8dbbc014-1cbf-48b0-8cb4-eb29c4a5190d",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBoxbtnTap",
+                                        "implHandler": [
+                                            "var me = this;\r",
+                                            "var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];\r",
+                                            "podcastcontent.setActiveItem(1);"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "85c9e6d7-a220-4c88-8710-1ba50e177c64"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSegmentbtnInitialize",
+                                "implHandler": [
+                                    "var me = this;\r",
+                                    "me.setPressedButtons(0);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "fb46dc6e-b550-4f59-af9a-c5dad208f39a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|animation": "flip",
+                "docked": null,
+                "height": null,
+                "hideAnimation": null,
+                "itemId": "podcastcontent",
+                "showAnimation": null,
+                "ui": "",
+                "designer|displayName": "Content",
+                "layout": "card"
+            },
+            "designerId": "a5fff91d-1e84-4101-b0d9-1263cca74d1a",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": null,
+                        "designer|displayName": "Plist",
+                        "scrollable": [
+                            "vertical"
+                        ],
+                        "store": "PodcastStore"
+                    },
+                    "designerId": "e8fbf8f4-9733-43e7-8fb5-d5769f1d3cbf",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<img class=\"photo\" src=\"{photo_url}\" width=\"40\" height=\"40\"/>\r",
+                                    "{name}<br/>\r",
+                                    "<img src=\"{rating_img_url_small}\"/>&nbsp;\r",
+                                    "<small>{address1}</small>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "e5710150-41f6-44ba-beba-ab23c0d6791c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": 5,
+                        "ui": "",
+                        "designer|displayName": "Pview",
+                        "scrollable": "vertical",
+                        "store": "PodcastStore"
+                    },
+                    "designerId": "ac8e4485-c7ef-4dea-83ef-0e77f10d6a71",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<img class=\"pview\" src=\"{photo_url}\" width=\"90\"/>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "635a1bd2-76c4-492f-83f2-2f43bc4c2099"
+                        }
+                    ]
                 }
             ]
         }

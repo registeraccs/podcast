@@ -29,7 +29,7 @@ Ext.define('MyApp.view.MainView', {
                 {
                     xtype: 'button',
                     align: 'right',
-                    iconCls: 'team',
+                    iconCls: 'compose',
                     text: ''
                 }
             ]

@@ -46,6 +46,21 @@
             },
             "codeClass": null,
             "userConfig": {
+                "title": "Library",
+                "iconCls": "list"
+            },
+            "designerId": "e872a3e2-7d45-4071-9065-15e5d67d3691",
+            "masterInstanceId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Setting",
                 "iconCls": "settings"
             },
             "designerId": "4054ce89-5582-4a27-92f6-ad86da00d91d",

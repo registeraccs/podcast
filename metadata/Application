@@ -6,12 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
+        "stores": [
+            "PodcastStore"
+        ],
         "views": [
             "Login",
             "MainView",
             "MyTab",
             "Podcast",
-            "Setting"
+            "Setting",
+            "Library"
         ],
         "controllers": [
             "MyController"
