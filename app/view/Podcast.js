@@ -48,7 +48,7 @@ Ext.define('MyApp.view.Podcast', {
                         itemId: 'segmentbtn',
                         ui: 'light',
                         hideOnMaskTap: false,
-                        scrollable: false,
+                        scrollable: true,
                         layout: {
                             align: 'end',
                             pack: 'end',
@@ -85,6 +85,22 @@ Ext.define('MyApp.view.Podcast', {
                 ]
             },
             {
+                xtype: 'toolbar',
+                docked: 'top',
+                style: 'border: none;\r\nbackground: #f25260;',
+                items: [
+                    {
+                        xtype: 'label',
+                        flex: 1,
+                        html: 'Unplayed Episodes'
+                    },
+                    {
+                        xtype: 'label',
+                        html: '14'
+                    }
+                ]
+            },
+            {
                 xtype: 'panel',
                 flex: 1,
                 itemId: 'podcastcontent',
@@ -98,12 +114,23 @@ Ext.define('MyApp.view.Podcast', {
                         xtype: 'list',
                         scrollable: 'vertical',
                         itemTpl: [
-                            '<img class="photo" src="{photo_url}" width="40" height="40"/>',
-                            '{name}<br/>',
-                            '<img src="{rating_img_url_small}"/>&nbsp;',
-                            '<small>{address1}</small>'
+                            '<img class="photo" src="{photo_url}" width="60" height="60"/>',
+                            '<div class="list-info">',
+                            '	<div class="podcast-name">{name}</div>',
+                            '    <div class="music-box">',
+                            '    	<span class="music-icon"></span><span class="music-toal">5</span>',
+                            '    </div>',
+                            '    <div class="video-box">',
+                            '    	<span class="video-icon"></span><span class="video-toal">10</span>',
+                            '    </div>',
+                            '</div>',
+                            '<div class="unplayed-label">',
+                            '	<span >4</span>',
+                            '</div>',
+                            ''
                         ],
-                        store: 'PodcastStore'
+                        store: 'PodcastStore',
+                        itemHeight: 70
                     },
                     {
                         xtype: 'dataview',

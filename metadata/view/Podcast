@@ -29,7 +29,8 @@
                 "style": [
                     "border: none;\r",
                     "background: #8fced6;"
-                ]
+                ],
+                "designer|displayName": "SearchBar"
             },
             "configAlternates": {
                 "style": "object"
@@ -70,7 +71,7 @@
                         "right": null,
                         "ui": "light",
                         "hideOnMaskTap": false,
-                        "scrollable": false
+                        "scrollable": true
                     },
                     "designerId": "64dad0dc-2dc8-409c-9a57-093fdad1a61b",
                     "cn": [
@@ -170,6 +171,57 @@
             ]
         },
         {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "style": [
+                    "border: none;\r",
+                    "background: #f25260;\r",
+                    ""
+                ],
+                "designer|displayName": "UnplayedBar"
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "42a37a52-b17a-45a1-8529-3efdcb413169",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "html": "Unplayed Episodes",
+                        "style": null,
+                        "designer|displayName": "UnplayedLabel"
+                    },
+                    "designerId": "e537f801-a26b-4b1f-b2cd-3d9aa3d552ad"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "14",
+                        "designer|displayName": "UnplayedTotal"
+                    },
+                    "designerId": "0eec1c61-aa87-4d82-bfba-243f52a03755"
+                }
+            ]
+        },
+        {
             "type": "Ext.Panel",
             "reference": {
                 "name": "items",
@@ -198,13 +250,18 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "border": null,
                         "docked": null,
                         "height": null,
+                        "style": null,
+                        "ui": null,
                         "designer|displayName": "Plist",
                         "scrollable": [
                             "vertical"
                         ],
-                        "store": "PodcastStore"
+                        "selectedCls": null,
+                        "store": "PodcastStore",
+                        "itemHeight": 70
                     },
                     "designerId": "e8fbf8f4-9733-43e7-8fb5-d5769f1d3cbf",
                     "cn": [
@@ -217,10 +274,20 @@
                             "codeClass": null,
                             "userConfig": {
                                 "implHandler": [
-                                    "<img class=\"photo\" src=\"{photo_url}\" width=\"40\" height=\"40\"/>\r",
-                                    "{name}<br/>\r",
-                                    "<img src=\"{rating_img_url_small}\"/>&nbsp;\r",
-                                    "<small>{address1}</small>"
+                                    "<img class=\"photo\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
+                                    "<div class=\"list-info\">\r",
+                                    "\t<div class=\"podcast-name\">{name}</div>\r",
+                                    "    <div class=\"music-box\">\r",
+                                    "    \t<span class=\"music-icon\"></span><span class=\"music-toal\">5</span>\r",
+                                    "    </div>\r",
+                                    "    <div class=\"video-box\">\r",
+                                    "    \t<span class=\"video-icon\"></span><span class=\"video-toal\">10</span>\r",
+                                    "    </div>\r",
+                                    "</div>\r",
+                                    "<div class=\"unplayed-label\">\r",
+                                    "\t<span >4</span>\r",
+                                    "</div>\r",
+                                    ""
                                 ],
                                 "designer|displayName": "itemTpl"
                             },
