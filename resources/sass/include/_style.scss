@@ -45,16 +45,6 @@
 .photo {
     float: left;
     margin: -9px 5px 0px -10px;
-    -webkit-box-shadow: 0 2px 4px #777;
-}
-.pview{
-    float: left;
-    margin: 5px 0 0 5px;
-    padding: 0;
-    border: 1px solid #9AD9ED;
-    -webkit-box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
-    -moz-box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
-    box-shadow:0 5px 10px rgba(0, 0, 1, 0.5);
 }
 .music-box{
     float: left;
@@ -65,7 +55,6 @@
     height: 15px;
     float: left;
 }
-
 .video-icon{
     background: transparent url('../images/video-icon.png') no-repeat;
     width: 13px;
@@ -88,7 +77,7 @@
     font-weight: bold;
     float: left;
 }
-.unplayed-label{
+.unplayed-label, .unplayed-label-box{
     min-width: 30px;
     position: absolute;
     right: 0;
@@ -96,9 +85,14 @@
     text-align: center;
     background: #f25260;
     padding: 5px;
-    margin: 3px;
+    
     color: #fff;
+    -webkit-box-shadow: -3px 3px 0px 0px rgba(48, 48, 48, 1);
+    -moz-box-shadow: -3px 3px 0px 0px rgba(48, 48, 48, 1);
     box-shadow: -3px 3px 0px 0px rgba(48, 48, 48, 1);
+}
+.unplayed-label{
+    margin: 3px;
 }
 .podcast-name{
     font-size: 14px;
@@ -107,4 +101,57 @@
 .x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal{
     border-bottom: 2px solid #fff;
     border-top: none;
+}
+/*----My podcast box view----*/
+.pview{
+    position: relative;
+    margin: 5px;
+}
+.shadow{
+    -webkit-box-shadow: 0 2px 4px #777;
+    -moz-box-shadow:0 2px 4px #777;
+    box-shadow:0 2px 4px #777;
+}
+.unplayedlabel{
+    text-align: left;
+    margin-left: -5px;   
+}
+
+.x-button.x-button-back:before, .x-button.x-button-forward:before, .x-toolbar .x-button.x-button-back:before, .x-toolbar .x-button.x-button-forward:before{
+    background: #8fced6;
+  }
+  .x-button, .x-button.x-button-back:after, .x-button.x-button-forward:after, .x-toolbar .x-button, .x-toolbar .x-button.x-button-back:after, .x-toolbar .x-button.x-button-forward:after{
+    background: #8fced6;
+  }
+  .x-title{
+    line-height: 21px;
+  }
+/*----Unplayed----*/
+.music-icon-unplayed{
+    background: transparent url('../images/music-icon-grey.png') no-repeat;
+    width: 13px;
+    height: 15px;
+    float: left;
+}
+.music-date{
+    margin: 0 15px 0 3px;
+    color: #999;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: bold;
+    float: left;
+}
+.video-icon-grey{
+    background: transparent url('../images/video-icon-grey.png') no-repeat;
+    width: 13px;
+    height: 12px;
+    float: left;
+}
+.video-date{
+    margin: -2px 15px 0 3px;
+    color: #999;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: bold;
+    float: left;
 }

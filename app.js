@@ -20,7 +20,8 @@ Ext.Loader.setConfig({
 
 Ext.application({
     stores: [
-        'PodcastStore'
+        'PodcastStore',
+        'UnplayedStore'
     ],
     views: [
         'Login',
@@ -28,7 +29,9 @@ Ext.application({
         'MyTab',
         'Podcast',
         'Setting',
-        'Library'
+        'Library',
+        'Unplayed',
+        'Episodes'
     ],
     controllers: [
         'MyController'

@@ -32,7 +32,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": null,
+                "title": "Podcast",
                 "iconCls": "music"
             },
             "designerId": "5a48da18-c25f-45ef-b4b9-5c327f5a11be",

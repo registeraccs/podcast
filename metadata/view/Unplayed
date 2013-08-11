@@ -1,0 +1,71 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "unplayedview",
+        "designer|userClassName": "Unplayed",
+        "designer|userAlias": "unplayed",
+        "layout": "fit",
+        "scrollable": "vertical"
+    },
+    "designerId": "e8aa058b-3164-442a-b710-ee0c56fc93c2",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "docked": null,
+                "height": null,
+                "style": null,
+                "ui": null,
+                "designer|displayName": "Plist",
+                "scrollable": [
+                    "vertical"
+                ],
+                "selectedCls": null,
+                "store": "UnplayedStore",
+                "itemHeight": 90
+            },
+            "designerId": "d0c6143a-9095-45ab-9cf5-c6918c264668",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"80\" height=\"80\"/>\r",
+                            "<div class=\"list-info\">\r",
+                            "\t<div class=\"podcast-name\">{name}</div>\r",
+                            "    <tpl if=\"type == 'music'\">\r",
+                            "        <div class=\"music-box\">\r",
+                            "            <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{date}</span>\r",
+                            "        </div>\r",
+                            "    <tpl else>\r",
+                            "        <div class=\"video-box\">\r",
+                            "            <span class=\"video-icon-grey\"></span><span class=\"video-date\">{date}</span>\r",
+                            "        </div>\r",
+                            "    </tpl>\r",
+                            "</div>\r",
+                            ""
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "d2c04ce2-758f-4d9e-a079-2f98f0a5bcf8"
+                }
+            ]
+        }
+    ]
+}

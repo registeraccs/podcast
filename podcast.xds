@@ -85,6 +85,30 @@
                 "app/store/PodcastStore.js"
             ],
             "className": "PodcastStore"
+        },
+        "e8aa058b-3164-442a-b710-ee0c56fc93c2": {
+            "paths": [
+                "metadata/view/Unplayed",
+                "app/view/override/Unplayed.js",
+                "app/view/Unplayed.js"
+            ],
+            "className": "Unplayed"
+        },
+        "2db60447-b3b4-4db9-8e2c-66f126736157": {
+            "paths": [
+                "metadata/store/UnplayedStore",
+                "app/store/override/UnplayedStore.js",
+                "app/store/UnplayedStore.js"
+            ],
+            "className": "UnplayedStore"
+        },
+        "3ccb6679-8c2d-472b-b718-088c1b120b25": {
+            "paths": [
+                "metadata/view/Episodes",
+                "app/view/override/Episodes.js",
+                "app/view/Episodes.js"
+            ],
+            "className": "Episodes"
         }
     },
     "viewOrderMap": {
@@ -94,10 +118,13 @@
             "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db",
             "17a25189-f914-460b-a9a8-92762b013e49",
             "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
-            "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2"
+            "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
+            "e8aa058b-3164-442a-b710-ee0c56fc93c2",
+            "3ccb6679-8c2d-472b-b718-088c1b120b25"
         ],
         "store": [
-            "046a2eff-8f2e-4065-9160-89a38a578f9f"
+            "046a2eff-8f2e-4065-9160-89a38a578f9f",
+            "2db60447-b3b4-4db9-8e2c-66f126736157"
         ],
         "controller": [
             "2df07941-2228-41eb-87fe-7243f9c73218"

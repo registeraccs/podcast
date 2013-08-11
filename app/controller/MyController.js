@@ -20,6 +20,18 @@ Ext.define('MyApp.controller.MyController', {
         control: {
             "button#signup": {
                 tap: 'onSignupTap'
+            },
+            "button#listbtn": {
+                tap: 'onListbtnTap'
+            },
+            "button#unplayedbtnright": {
+                tap: 'onUnplayedbtnrightTap'
+            },
+            "button#unplayedbtnleft": {
+                tap: 'onUnplayedbtnleftTap'
+            },
+            "list#mylist": {
+                itemtap: 'onMylistItemTap'
             }
         }
     },
@@ -27,6 +39,39 @@ Ext.define('MyApp.controller.MyController', {
     onSignupTap: function(button, e, eOpts) {
         Ext.Viewport.setActiveItem({
             xtype: 'mainview'
+        });
+    },
+
+    onListbtnTap: function(button, e, eOpts) {
+        var me = this;
+        var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];
+        podcastcontent.setActiveItem(0);
+    },
+
+    onUnplayedbtnrightTap: function(button, e, eOpts) {
+        var me = this;
+        me.Unplayed();
+    },
+
+    onUnplayedbtnleftTap: function(button, e, eOpts) {
+        var me = this;
+        me.Unplayed();
+    },
+
+    onMylistItemTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'episodes',
+            title: 'Episodes'
+        });
+    },
+
+    Unplayed: function() {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'unplayed',
+            title: 'Unplayed'
         });
     }
 

@@ -15,8 +15,25 @@
   }
 }
 
+@mixin back-button($color) {
+  @include transition(all .25s ease);
+  @include border-radius(6px);
+  margin-bottom: 4px;
+  font-size: 14px;
+  border: 1px solid #8fced6 !important;
+  background: $color;
+  color: white;
+  text-decoration: none;
+  .x-button-label {
+    padding: 0;
+  }
+}
+
 .default {
   @include modus-button(#324860);
+}
+.x-button-back {
+  @include back-button(#8fced6);
 }
 
 .primary {

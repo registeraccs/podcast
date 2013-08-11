@@ -22,15 +22,21 @@ Ext.define('MyApp.view.MainView', {
     ],
 
     config: {
+        itemId: 'nav',
         navigationBar: {
             baseCls: 'x-navigation',
             docked: 'top',
+            itemId: 'navbar',
+            layout: {
+                align: 'end',
+                type: 'hbox'
+            },
             items: [
                 {
                     xtype: 'button',
                     align: 'right',
-                    iconCls: 'compose',
-                    text: ''
+                    ui: 'plain',
+                    iconCls: 'compose'
                 }
             ]
         },

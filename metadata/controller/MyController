@@ -29,6 +29,106 @@
                 "designer|controlQuery": "button#signup"
             },
             "designerId": "5f31e1a1-cdaa-4cbb-bbd7-ea51aa9467e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListbtnTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];\r",
+                    "podcastcontent.setActiveItem(0);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#listbtn"
+            },
+            "designerId": "9cd6690f-63c1-4893-b97c-73d06648cc50"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onUnplayedbtnrightTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "me.Unplayed();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#unplayedbtnright"
+            },
+            "designerId": "2445b3a6-60c4-4b98-9892-32f3b5f28f79"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "Unplayed",
+                "implHandler": [
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'unplayed',\r",
+                    "    title: 'Unplayed'\r",
+                    "});"
+                ]
+            },
+            "designerId": "55faa837-b2d9-4b23-b8b3-d11c815316c2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onUnplayedbtnleftTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "me.Unplayed();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#unplayedbtnleft"
+            },
+            "designerId": "1ef1602f-9d9a-41eb-ac51-85107222cb09"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMylistItemTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'episodes',\r",
+                    "    title: 'Episodes'\r",
+                    "});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list#mylist"
+            },
+            "designerId": "258d1e0b-acd6-4eef-9ef3-182f4908f895"
         }
     ]
 }

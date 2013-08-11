@@ -31,6 +31,7 @@ Ext.define('MyApp.view.MyTab', {
         items: [
             {
                 xtype: 'podcast',
+                title: 'Podcast',
                 iconCls: 'music'
             },
             {

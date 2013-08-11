@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "itemId": null,
+        "itemId": "nav",
         "designer|userClassName": "MainView",
         "designer|userAlias": "mainview"
     },
@@ -20,8 +20,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "container|align": "end",
                 "baseCls": "x-navigation",
-                "docked": "top"
+                "centered": null,
+                "docked": "top",
+                "itemId": "navbar"
             },
             "designerId": "e64c5225-388b-4c0f-bab2-305842234c71",
             "cn": [
@@ -34,10 +37,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
+                        "ui": "plain",
                         "iconCls": "compose",
-                        "text": ""
+                        "text": null
                     },
-                    "designerId": "ce939530-a1d4-4487-8f1d-ec89f87c6377"
+                    "designerId": "1de80453-b83a-4d0b-aca0-e1cd65cf8dd5"
                 }
             ]
         },
@@ -49,9 +53,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "MainTab",
                 "title": "My Podcast"
             },
-            "designerId": "390ddcf4-6f3d-4d9a-a952-d828090fa6a9",
+            "designerId": "7b00b3ff-830a-4afc-b620-b65e51d0dc52",
             "masterInstanceId": "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db"
         }
     ]
