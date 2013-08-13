@@ -46,11 +46,20 @@
                     "codeClass": null,
                     "userConfig": {
                         "centered": null,
-                        "docked": "left",
+                        "docked": null,
                         "width": 200,
                         "label": ""
                     },
                     "designerId": "5d702fd1-82e4-4330-8843-52f402c5a041"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "ad513a9d-5ac8-43c8-b572-9149cd9205ac"
                 },
                 {
                     "type": "Ext.SegmentedButton",
@@ -61,17 +70,17 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "container|align": "end",
-                        "container|pack": "end",
-                        "centered": true,
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "centered": null,
                         "disabled": false,
-                        "docked": "right",
+                        "docked": null,
                         "height": null,
                         "itemId": "segmentbtn",
                         "right": null,
                         "ui": "light",
                         "hideOnMaskTap": false,
-                        "scrollable": true
+                        "scrollable": false
                     },
                     "designerId": "64dad0dc-2dc8-409c-9a57-093fdad1a61b",
                     "cn": [

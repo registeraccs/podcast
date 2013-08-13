@@ -36,22 +36,22 @@ Ext.define('MyApp.view.Podcast', {
                 items: [
                     {
                         xtype: 'searchfield',
-                        docked: 'left',
                         width: 200,
                         label: ''
                     },
                     {
+                        xtype: 'spacer'
+                    },
+                    {
                         xtype: 'segmentedbutton',
-                        centered: true,
                         disabled: false,
-                        docked: 'right',
                         itemId: 'segmentbtn',
                         ui: 'light',
                         hideOnMaskTap: false,
-                        scrollable: true,
+                        scrollable: false,
                         layout: {
-                            align: 'end',
-                            pack: 'end',
+                            align: 'center',
+                            pack: 'center',
                             type: 'hbox'
                         },
                         items: [
