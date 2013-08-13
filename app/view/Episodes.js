@@ -31,6 +31,12 @@ Ext.define('MyApp.view.Episodes', {
                 style: 'border: none;\r\nbackground: #8fced6;',
                 items: [
                     {
+                        xtype: 'label',
+                        html: 'Daft Punk Podcasts',
+                        style: 'color: #000;\r\nfont-size: 14px;',
+                        ui: ''
+                    },
+                    {
                         xtype: 'spacer'
                     },
                     {
@@ -41,8 +47,12 @@ Ext.define('MyApp.view.Episodes', {
                 ]
             },
             {
-                xtype: 'component',
-                flex: 0.6
+                xtype: 'container',
+                flex: 0.6,
+                html: '<p> 	<div style="float: left; text-align:center;"> 	    <img width="150px" height="150px" src="http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms" style="margin: 5px 10px 5px 5px;"> 	    <div><span style="float: none" class="music-toal">5</span><span style="float: none" class="video-toal">10</span></div> 	</div> 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.  more  </p>',
+                style: 'color: #555555;\r\nfont-size: 12px;',
+                ui: '',
+                scrollable: 'vertical'
             },
             {
                 xtype: 'list',

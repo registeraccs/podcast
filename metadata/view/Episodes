@@ -35,6 +35,26 @@
             "designerId": "206ea5c9-2ab2-4cd8-8f0a-409254cc9a91",
             "cn": [
                 {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Daft Punk Podcasts",
+                        "style": [
+                            "color: #000;\r",
+                            "font-size: 14px;"
+                        ],
+                        "ui": ""
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "49d978a8-656e-4200-b593-cb2d0556f68d"
+                },
+                {
                     "type": "Ext.Spacer",
                     "reference": {
                         "name": "items",
@@ -66,33 +86,26 @@
             ]
         },
         {
-            "type": "Ext.Component",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 0.6
+                "layout|flex": 0.6,
+                "html": "<p> \t<div style=\"float: left; text-align:center;\"> \t    <img width=\"150px\" height=\"150px\" src=\"http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms\" style=\"margin: 5px 10px 5px 5px;\"> \t    <div><span style=\"float: none\" class=\"music-toal\">5</span><span style=\"float: none\" class=\"video-toal\">10</span></div> \t</div> \tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.  more  </p>",
+                "style": [
+                    "color: #555555;\r",
+                    "font-size: 12px;"
+                ],
+                "ui": "",
+                "scrollable": "vertical"
             },
-            "designerId": "0b483808-119e-4045-b750-eb31f6b6a398",
-            "cn": [
-                {
-                    "type": "Ext.XTemplate",
-                    "reference": {
-                        "name": "tpl",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            ""
-                        ],
-                        "designer|displayName": "tpl"
-                    },
-                    "designerId": "61d58a1f-7263-4164-a08b-63f2d0a87351"
-                }
-            ]
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "f435c772-91e1-4813-b222-d25fa148386b"
         },
         {
             "type": "Ext.dataview.List",

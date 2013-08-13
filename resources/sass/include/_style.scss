@@ -46,37 +46,26 @@
     float: left;
     margin: -9px 5px 0px -10px;
 }
-.music-box{
+
+.music-toal {
+    background: url("../images/music-icon.png") no-repeat scroll 0 0 transparent;
+    color: #2D5F73;
     float: left;
-}
-.music-icon{
-    background: transparent url('../images/music-icon.png') no-repeat;
-    width: 13px;
-    height: 15px;
-    float: left;
-}
-.video-icon{
-    background: transparent url('../images/video-icon.png') no-repeat;
-    width: 13px;
-    height: 12px;
-    float: left;
-}
-.music-toal{
+    font-size: 11px;
+    font-weight: bold;
     margin: 0 15px 0 3px;
-    color: #2d5f73;
-    font-size: 11px;
-    line-height: 15px;
-    font-weight: bold;
-    float: left;
+    padding-left: 16px;
 }
-.video-toal{
-    margin-left: 5px;
-    color: #2d5f73;
-    font-size: 11px;
-    line-height: 15px;
-    font-weight: bold;
+
+.video-toal {
+    background: url("../images/video-icon.png") no-repeat scroll 0 0 transparent;
+    color: #2D5F73;
     float: left;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 15px;
 }
+
 .unplayed-label, .unplayed-label-box{
     min-width: 30px;
     position: absolute;
