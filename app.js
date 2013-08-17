@@ -31,7 +31,8 @@ Ext.application({
         'Setting',
         'Library',
         'Unplayed',
-        'Episodes'
+        'Episodes',
+        'Episode'
     ],
     controllers: [
         'MyController'

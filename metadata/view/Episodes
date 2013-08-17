@@ -121,6 +121,7 @@
                 "border": null,
                 "docked": null,
                 "height": null,
+                "itemId": "mylist2",
                 "style": null,
                 "ui": null,
                 "designer|displayName": "Plist",

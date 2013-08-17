@@ -59,6 +59,7 @@ Ext.define('MyApp.view.Episodes', {
             {
                 xtype: 'list',
                 flex: 1,
+                itemId: 'mylist2',
                 scrollable: 'vertical',
                 itemTpl: [
                     '<img class="photo shadow" src="{photo_url}" width="80" height="80"/>',

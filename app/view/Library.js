@@ -18,10 +18,49 @@ Ext.define('MyApp.view.Library', {
     alias: 'widget.library',
 
     config: {
+        layout: {
+            type: 'fit'
+        },
         items: [
             {
-                xtype: 'button',
-                text: 'MyButton3'
+                xtype: 'toolbar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'searchfield',
+                        label: ''
+                    },
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'button',
+                        style: 'background: #fff;\r\ncolor: #8fced6;\r\nborder: none;',
+                        text: 'URL...'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                scrollable: 'vertical',
+                itemTpl: [
+                    '<img class="photo shadow" src="{photo_url}" width="80" height="80"/>',
+                    '<div class="list-info">',
+                    '	<div class="podcast-name">{name}</div>',
+                    '    <tpl if="type == \'music\'">',
+                    '        <div class="music-box">',
+                    '            <span class="music-icon-unplayed"></span><span class="music-date">{date}</span>',
+                    '        </div>',
+                    '    <tpl else>',
+                    '        <div class="video-box">',
+                    '            <span class="video-icon-grey"></span><span class="video-date">{date}</span>',
+                    '        </div>',
+                    '    </tpl>',
+                    '</div>',
+                    ''
+                ],
+                store: 'UnplayedStore',
+                itemHeight: 90
             }
         ]
     }

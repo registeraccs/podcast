@@ -26,25 +26,50 @@ Ext.define('MyApp.view.MyTab', {
     config: {
         tabBar: {
             docked: 'bottom',
+            itemId: 'mytabbar',
             style: 'background: #fff;'
         },
         items: [
             {
                 xtype: 'podcast',
-                title: 'Podcast',
+                itemId: 'podcast',
                 iconCls: 'music'
             },
             {
                 xtype: 'library',
-                title: 'Library',
+                itemId: 'library',
+                title: '',
                 iconCls: 'list'
             },
             {
                 xtype: 'setting',
-                title: 'Setting',
+                itemId: 'setting',
+                title: '',
                 iconCls: 'settings'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onContainerActivate',
+                event: 'activate',
+                delegate: '#library'
+            },
+            {
+                fn: 'onContainerActivate1',
+                event: 'activate',
+                delegate: '#setting'
+            }
         ]
+    },
+
+    onContainerActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.getNavigationBar().setTitle('Library');
+    },
+
+    onContainerActivate1: function(newActiveItem, container, oldActiveItem, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.getNavigationBar().setTitle('Setting');
     }
 
 });

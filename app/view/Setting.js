@@ -20,9 +20,27 @@ Ext.define('MyApp.view.Setting', {
     config: {
         items: [
             {
+                xtype: 'toolbar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'label',
+                        html: 'E-mail Notifications',
+                        style: 'color: #000'
+                    }
+                ]
+            },
+            {
                 xtype: 'togglefield',
                 label: 'Daily Mail Digest',
                 labelWidth: '60%'
+            },
+            {
+                xtype: 'button',
+                height: 40,
+                margin: '20 30',
+                style: 'color: #8fced6;\r\nbackground: #fff;\r\nborder:none;\r\nfont-size: 14px;',
+                text: 'Log Out'
             }
         ]
     }

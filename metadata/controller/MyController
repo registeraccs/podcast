@@ -115,7 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onMylistItemTap",
+                "fn": "onMyPodCastTap",
                 "implHandler": [
                     "var me = this;\r",
                     "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
@@ -129,6 +129,29 @@
                 "designer|controlQuery": "list#mylist"
             },
             "designerId": "258d1e0b-acd6-4eef-9ef3-182f4908f895"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEpisodesTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'episode',\r",
+                    "    title: 'Episode Info'\r",
+                    "});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list#mylist2"
+            },
+            "designerId": "05e5ba95-f867-4746-ac55-a678b5c3f667"
         }
     ]
 }

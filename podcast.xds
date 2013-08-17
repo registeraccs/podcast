@@ -109,6 +109,14 @@
                 "app/view/Episodes.js"
             ],
             "className": "Episodes"
+        },
+        "ce0f6ca5-d437-4eb3-ab6e-8135837e1776": {
+            "paths": [
+                "metadata/view/Episode",
+                "app/view/override/Episode.js",
+                "app/view/Episode.js"
+            ],
+            "className": "Episode"
         }
     },
     "viewOrderMap": {
@@ -120,7 +128,8 @@
             "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
             "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
             "e8aa058b-3164-442a-b710-ee0c56fc93c2",
-            "3ccb6679-8c2d-472b-b718-088c1b120b25"
+            "3ccb6679-8c2d-472b-b718-088c1b120b25",
+            "ce0f6ca5-d437-4eb3-ab6e-8135837e1776"
         ],
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",

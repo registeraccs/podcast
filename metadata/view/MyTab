@@ -20,6 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
+                "itemId": "mytabbar",
                 "style": "background: #fff;"
             },
             "designerId": "1e687cdb-b5d5-4cf8-bed6-0839ac8b9a78"
@@ -32,7 +33,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Podcast",
+                "itemId": "podcast",
+                "title": null,
+                "badgeText": null,
                 "iconCls": "music"
             },
             "designerId": "5a48da18-c25f-45ef-b4b9-5c327f5a11be",
@@ -46,11 +49,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Library",
+                "itemId": "library",
+                "title": "",
                 "iconCls": "list"
             },
             "designerId": "e872a3e2-7d45-4071-9065-15e5d67d3691",
-            "masterInstanceId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549"
+            "masterInstanceId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerActivate",
+                        "implHandler": [
+                            "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                            "nav.getNavigationBar().setTitle('Library');"
+                        ],
+                        "name": "activate"
+                    },
+                    "designerId": "1934422e-dde6-4b29-b27b-067f734175ee"
+                }
+            ]
         },
         {
             "type": "linkedinstance",
@@ -60,11 +83,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Setting",
+                "itemId": "setting",
+                "title": "",
                 "iconCls": "settings"
             },
             "designerId": "4054ce89-5582-4a27-92f6-ad86da00d91d",
-            "masterInstanceId": "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2"
+            "masterInstanceId": "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerActivate1",
+                        "implHandler": [
+                            "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                            "nav.getNavigationBar().setTitle('Setting');"
+                        ],
+                        "name": "activate"
+                    },
+                    "designerId": "b243721a-fa17-441e-9044-8e7f12cad590"
+                }
+            ]
         }
     ]
 }

@@ -7,21 +7,119 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Library",
-        "designer|userAlias": "library"
+        "designer|userAlias": "library",
+        "layout": "fit"
     },
     "designerId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
     "cn": [
         {
-            "type": "Ext.Button",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "text": "MyButton3"
+                "docked": "top"
             },
-            "designerId": "6c716672-95cf-438f-92d6-27e235418037"
+            "designerId": "0efdd665-c886-4ac9-b4ac-17183ee0d068",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "label": ""
+                    },
+                    "designerId": "4b665f9d-a7da-48df-8226-799986d1be4d"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "2a4b150c-1a17-4080-8231-c7ff789978a3"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "style": [
+                            "background: #fff;\r",
+                            "color: #8fced6;\r",
+                            "border: none;"
+                        ],
+                        "text": "URL..."
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "ef3d619b-f657-404f-9da9-04fd15a5f6e9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "docked": null,
+                "height": null,
+                "style": null,
+                "ui": null,
+                "designer|displayName": "Plist",
+                "scrollable": [
+                    "vertical"
+                ],
+                "selectedCls": null,
+                "store": "UnplayedStore",
+                "itemHeight": 90
+            },
+            "designerId": "d4b680b0-feb8-4262-8048-8b73d4c361d2",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"80\" height=\"80\"/>\r",
+                            "<div class=\"list-info\">\r",
+                            "\t<div class=\"podcast-name\">{name}</div>\r",
+                            "    <tpl if=\"type == 'music'\">\r",
+                            "        <div class=\"music-box\">\r",
+                            "            <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{date}</span>\r",
+                            "        </div>\r",
+                            "    <tpl else>\r",
+                            "        <div class=\"video-box\">\r",
+                            "            <span class=\"video-icon-grey\"></span><span class=\"video-date\">{date}</span>\r",
+                            "        </div>\r",
+                            "    </tpl>\r",
+                            "</div>\r",
+                            ""
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "8ba2e081-0da2-40fc-82e6-f5b5b59f96cb"
+                }
+            ]
         }
     ]
 }

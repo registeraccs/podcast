@@ -12,6 +12,33 @@
     "designerId": "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
     "cn": [
         {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "designerId": "7c4cbc9b-5a5e-4cff-9ddb-419f87c39690",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "E-mail Notifications",
+                        "style": "color: #000"
+                    },
+                    "designerId": "10188a79-b5e1-40ee-a257-a63befa8b9cb"
+                }
+            ]
+        },
+        {
             "type": "Ext.field.Toggle",
             "reference": {
                 "name": "items",
@@ -23,6 +50,32 @@
                 "labelWidth": "60%"
             },
             "designerId": "e9c144ca-7d2d-4376-a666-14bb9f943278"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "docked": null,
+                "height": 40,
+                "margin": "20 30",
+                "style": [
+                    "color: #8fced6;\r",
+                    "background: #fff;\r",
+                    "border:none;\r",
+                    "font-size: 14px;"
+                ],
+                "width": null,
+                "text": "Log Out"
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "24ed5b87-9de1-4893-a672-c4000c60393b"
         }
     ]
 }

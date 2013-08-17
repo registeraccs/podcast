@@ -31,7 +31,10 @@ Ext.define('MyApp.controller.MyController', {
                 tap: 'onUnplayedbtnleftTap'
             },
             "list#mylist": {
-                itemtap: 'onMylistItemTap'
+                itemtap: 'onMyPodCastTap'
+            },
+            "list#mylist2": {
+                itemtap: 'onEpisodesTap'
             }
         }
     },
@@ -58,12 +61,21 @@ Ext.define('MyApp.controller.MyController', {
         me.Unplayed();
     },
 
-    onMylistItemTap: function(dataview, index, target, record, e, eOpts) {
+    onMyPodCastTap: function(dataview, index, target, record, e, eOpts) {
         var me = this;
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.push({
             xtype: 'episodes',
             title: 'Episodes'
+        });
+    },
+
+    onEpisodesTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'episode',
+            title: 'Episode Info'
         });
     },
 
