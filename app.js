@@ -33,7 +33,7 @@ Ext.application({
         'Unplayed',
         'Episodes',
         'Episode',
-        'Audio'
+        'Video'
     ],
     controllers: [
         'MyController'

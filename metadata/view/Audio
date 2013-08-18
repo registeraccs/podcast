@@ -1,5 +1,5 @@
 {
-    "type": "Ext.Container",
+    "type": "Ext.Audio",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,25 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Audio",
-        "designer|userAlias": null
+        "designer|userAlias": "audio",
+        "autoResume": null,
+        "enableControls": true,
+        "url": "crash.mp3"
     },
-    "designerId": "63b9fa8c-b2f6-4540-8f85-af645aefa0e1",
-    "cn": [
-        {
-            "type": "Ext.Audio",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|createAlias": "audio",
-                "autoResume": null,
-                "enableControls": true,
-                "loop": null,
-                "url": "http://app.dev/podcast/crash.mp3"
-            },
-            "designerId": "16b8eaa5-79a8-41fe-8ee3-1a7cfab5621d"
-        }
-    ]
+    "designerId": "af31130b-af5f-49b4-9781-2d95505d3b0d"
 }

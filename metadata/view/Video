@@ -1,0 +1,16 @@
+{
+    "type": "Ext.Video",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Video",
+        "designer|userAlias": "video",
+        "url": [
+            "BigBuck.m4v"
+        ]
+    },
+    "designerId": "7b3854e7-3385-4ed1-8155-a2e502368646"
+}

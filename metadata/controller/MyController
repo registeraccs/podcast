@@ -167,6 +167,12 @@
                     "nav.push({\r",
                     "    xtype: 'audio',\r",
                     "    title: 'Audio'\r",
+                    "});\r",
+                    "\r",
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'video',\r",
+                    "    title: 'Video'\r",
                     "});"
                 ],
                 "name": "itemtaphold",

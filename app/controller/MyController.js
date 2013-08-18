@@ -86,6 +86,12 @@ Ext.define('MyApp.controller.MyController', {
             xtype: 'audio',
             title: 'Audio'
         });
+
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'video',
+            title: 'Video'
+        });
     },
 
     Unplayed: function() {
