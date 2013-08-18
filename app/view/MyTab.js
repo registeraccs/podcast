@@ -55,8 +55,18 @@ Ext.define('MyApp.view.MyTab', {
                 delegate: '#library'
             },
             {
+                fn: 'onContainerDeactivate',
+                event: 'deactivate',
+                delegate: '#library'
+            },
+            {
                 fn: 'onContainerActivate1',
                 event: 'activate',
+                delegate: '#setting'
+            },
+            {
+                fn: 'onContainerDeactivate1',
+                event: 'deactivate',
                 delegate: '#setting'
             }
         ]
@@ -67,9 +77,19 @@ Ext.define('MyApp.view.MyTab', {
         nav.getNavigationBar().setTitle('Library');
     },
 
+    onContainerDeactivate: function(oldActiveItem, container, newActiveItem, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.getNavigationBar().setTitle('My Podcast');
+    },
+
     onContainerActivate1: function(newActiveItem, container, oldActiveItem, eOpts) {
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.getNavigationBar().setTitle('Setting');
+    },
+
+    onContainerDeactivate1: function(oldActiveItem, container, newActiveItem, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.getNavigationBar().setTitle('My Podcast');
     }
 
 });

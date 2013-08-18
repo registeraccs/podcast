@@ -34,7 +34,8 @@ Ext.define('MyApp.controller.MyController', {
                 itemtap: 'onMyPodCastTap'
             },
             "list#mylist2": {
-                itemtap: 'onEpisodesTap'
+                itemtap: 'onEpisodesTap',
+                itemtaphold: 'onMylist2ItemTaphold'
             }
         }
     },
@@ -76,6 +77,14 @@ Ext.define('MyApp.controller.MyController', {
         nav.push({
             xtype: 'episode',
             title: 'Episode Info'
+        });
+    },
+
+    onMylist2ItemTaphold: function(dataview, index, target, record, e, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'audio',
+            title: 'Audio'
         });
     },
 

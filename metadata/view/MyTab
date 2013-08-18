@@ -72,6 +72,23 @@
                         "name": "activate"
                     },
                     "designerId": "1934422e-dde6-4b29-b27b-067f734175ee"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerDeactivate",
+                        "implHandler": [
+                            "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                            "nav.getNavigationBar().setTitle('My Podcast');"
+                        ],
+                        "name": "deactivate"
+                    },
+                    "designerId": "78e7a3ec-2d1d-4525-b621-a91bf3f45525"
                 }
             ]
         },
@@ -106,6 +123,23 @@
                         "name": "activate"
                     },
                     "designerId": "b243721a-fa17-441e-9044-8e7f12cad590"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerDeactivate1",
+                        "implHandler": [
+                            "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                            "nav.getNavigationBar().setTitle('My Podcast');"
+                        ],
+                        "name": "deactivate"
+                    },
+                    "designerId": "ecf0a32c-40ed-4e02-b7da-d6d4fbd78fe1"
                 }
             ]
         }

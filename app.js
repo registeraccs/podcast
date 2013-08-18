@@ -32,7 +32,8 @@ Ext.application({
         'Library',
         'Unplayed',
         'Episodes',
-        'Episode'
+        'Episode',
+        'Audio'
     ],
     controllers: [
         'MyController'

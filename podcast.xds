@@ -117,6 +117,14 @@
                 "app/view/Episode.js"
             ],
             "className": "Episode"
+        },
+        "63b9fa8c-b2f6-4540-8f85-af645aefa0e1": {
+            "paths": [
+                "metadata/view/Audio",
+                "app/view/override/Audio.js",
+                "app/view/Audio.js"
+            ],
+            "className": "Audio"
         }
     },
     "viewOrderMap": {
@@ -129,7 +137,8 @@
             "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
             "e8aa058b-3164-442a-b710-ee0c56fc93c2",
             "3ccb6679-8c2d-472b-b718-088c1b120b25",
-            "ce0f6ca5-d437-4eb3-ab6e-8135837e1776"
+            "ce0f6ca5-d437-4eb3-ab6e-8135837e1776",
+            "63b9fa8c-b2f6-4540-8f85-af645aefa0e1"
         ],
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",

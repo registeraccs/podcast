@@ -152,6 +152,28 @@
                 "designer|controlQuery": "list#mylist2"
             },
             "designerId": "05e5ba95-f867-4746-ac55-a678b5c3f667"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMylist2ItemTaphold",
+                "implHandler": [
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'audio',\r",
+                    "    title: 'Audio'\r",
+                    "});"
+                ],
+                "name": "itemtaphold",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list#mylist2"
+            },
+            "designerId": "0c2300f7-eb31-447b-a2b2-3a8251b38ecf"
         }
     ]
 }
