@@ -19,9 +19,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
                 "docked": "bottom",
+                "height": null,
                 "itemId": "mytabbar",
-                "style": "background: #fff;"
+                "style": "background: #fff;border:none;",
+                "modal": null
             },
             "designerId": "1e687cdb-b5d5-4cf8-bed6-0839ac8b9a78"
         },
@@ -49,12 +53,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "library",
-                "title": "",
-                "iconCls": "list"
+                "iconCls": "bookmarks",
+                "itemId": "category"
             },
-            "designerId": "e872a3e2-7d45-4071-9065-15e5d67d3691",
-            "masterInstanceId": "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+            "designerId": "ee455a57-c240-489e-92d9-aee167c5a336",
+            "masterInstanceId": "e4c1a7df-a085-4495-a99d-7cda7983bcac",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -71,7 +74,7 @@
                         ],
                         "name": "activate"
                     },
-                    "designerId": "1934422e-dde6-4b29-b27b-067f734175ee"
+                    "designerId": "ebc744e2-6c49-4683-bb37-6f0d18f67b51"
                 },
                 {
                     "type": "basiceventbinding",
@@ -88,7 +91,7 @@
                         ],
                         "name": "deactivate"
                     },
-                    "designerId": "78e7a3ec-2d1d-4525-b621-a91bf3f45525"
+                    "designerId": "371d9b8c-fafc-45f5-be9e-278171f5e42a"
                 }
             ]
         },

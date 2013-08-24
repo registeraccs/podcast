@@ -133,6 +133,22 @@
                 "app/view/Video.js"
             ],
             "className": "Video"
+        },
+        "e4c1a7df-a085-4495-a99d-7cda7983bcac": {
+            "paths": [
+                "metadata/view/Category",
+                "app/view/override/Category.js",
+                "app/view/Category.js"
+            ],
+            "className": "Category"
+        },
+        "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2": {
+            "paths": [
+                "metadata/view/LibrarySearch",
+                "app/view/override/LibrarySearch.js",
+                "app/view/LibrarySearch.js"
+            ],
+            "className": "LibrarySearch"
         }
     },
     "viewOrderMap": {
@@ -141,8 +157,10 @@
             "de86ac27-3d9e-4aee-a3e0-773694009a17",
             "b71833c2-36b7-4d66-aa6f-0aaf6b4bb9db",
             "17a25189-f914-460b-a9a8-92762b013e49",
-            "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+            "e4c1a7df-a085-4495-a99d-7cda7983bcac",
             "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
+            "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+            "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2",
             "e8aa058b-3164-442a-b710-ee0c56fc93c2",
             "3ccb6679-8c2d-472b-b718-088c1b120b25",
             "ce0f6ca5-d437-4eb3-ab6e-8135837e1776",

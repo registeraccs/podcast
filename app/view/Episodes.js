@@ -19,14 +19,10 @@ Ext.define('MyApp.view.Episodes', {
 
     config: {
         itemId: 'episodes',
-        layout: {
-            type: 'vbox'
-        },
         scrollable: 'vertical',
         items: [
             {
                 xtype: 'toolbar',
-                flex: 1,
                 docked: 'top',
                 style: 'border: none;\r\nbackground: #8fced6;',
                 items: [
@@ -48,21 +44,21 @@ Ext.define('MyApp.view.Episodes', {
             },
             {
                 xtype: 'container',
-                flex: 0.6,
                 docked: 'top',
-                height: 170,
-                html: '<p> 	<div style="float: left; text-align:center;"> 	    <img width="150px" height="150px" src="http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms" style="margin: 5px 10px 5px 5px;"> 	    <div><span style="float: none" class="music-toal">5</span><span style="float: none" class="video-toal">10</span></div> 	</div> 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.  more  </p>',
+                height: 80,
+                html: '<p> 	<div style="float: left; text-align:center;"> 	    <img width="100px" height="100px" src="http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms" style="margin: 5px 10px 5px 5px;"> 	    <div><span style="float: none" class="music-toal">5</span><span style="float: none" class="video-toal">10</span></div> 	</div> 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.  more  </p>',
                 style: 'color: #555555;\r\nfont-size: 12px;',
                 ui: '',
-                scrollable: 'vertical'
+                scrollable: true
             },
             {
                 xtype: 'list',
-                flex: 1,
+                docked: 'top',
+                height: '100%',
                 itemId: 'mylist2',
-                scrollable: 'vertical',
+                scrollable: true,
                 itemTpl: [
-                    '<img class="photo shadow" src="{photo_url}" width="80" height="80"/>',
+                    '<img class="photo shadow" src="{photo_url}" width="60" height="60"/>',
                     '<div class="list-info">',
                     '	<div class="podcast-name">{name}</div>',
                     '    <tpl if="type == \'music\'">',
@@ -78,7 +74,7 @@ Ext.define('MyApp.view.Episodes', {
                     ''
                 ],
                 store: 'UnplayedStore',
-                itemHeight: 90
+                itemHeight: 70
             }
         ]
     }

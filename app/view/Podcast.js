@@ -48,7 +48,6 @@ Ext.define('MyApp.view.Podcast', {
                         itemId: 'segmentbtn',
                         ui: 'light',
                         hideOnMaskTap: false,
-                        scrollable: false,
                         layout: {
                             align: 'center',
                             pack: 'center',
@@ -127,7 +126,7 @@ Ext.define('MyApp.view.Podcast', {
                         itemId: 'mylist',
                         scrollable: 'vertical',
                         itemTpl: [
-                            '<img class="photo shadow" src="{photo_url}" width="80" height="80"/>',
+                            '<img class="photo shadow" src="{photo_url}" width="60" height="60"/>',
                             '<div class="list-info">',
                             '	<div class="podcast-name">{name}</div>',
                             '    <div class="music-toal">5</div>',
@@ -139,7 +138,7 @@ Ext.define('MyApp.view.Podcast', {
                             ''
                         ],
                         store: 'PodcastStore',
-                        itemHeight: 90
+                        itemHeight: 70
                     },
                     {
                         xtype: 'dataview',
@@ -149,7 +148,7 @@ Ext.define('MyApp.view.Podcast', {
                         inline: true,
                         itemTpl: [
                             '<div class="pview">',
-                            '	<img class="shadow" src="{photo_url}" width="130" height="130"/>',
+                            '	<img class="shadow" src="{photo_url}" width="90" height="90"/>',
                             '    <div class="unplayed-label-box">',
                             '        <span >4</span>',
                             '    </div>',

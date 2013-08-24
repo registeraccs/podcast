@@ -1,0 +1,50 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LibrarySearch",
+        "designer|userAlias": "librarysearch",
+        "layout": "fit"
+    },
+    "designerId": "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "docked": "top",
+                "style": "border:none"
+            },
+            "designerId": "e32f9d72-0305-4fee-b506-ab57b021ef82",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "docked": null,
+                        "style": null,
+                        "width": null,
+                        "label": "",
+                        "name": ""
+                    },
+                    "designerId": "89bfe8bd-f20f-4487-9c8a-685376fec461"
+                }
+            ]
+        }
+    ]
+}

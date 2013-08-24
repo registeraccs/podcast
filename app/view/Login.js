@@ -37,7 +37,7 @@ Ext.define('MyApp.view.Login', {
                     {
                         xtype: 'component',
                         centered: true,
-                        cls: 'logo'
+                        cls: 'mobile-logo'
                     }
                 ]
             },
@@ -45,20 +45,20 @@ Ext.define('MyApp.view.Login', {
                 xtype: 'label',
                 docked: 'top',
                 html: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad veniam, quis nostrud exercitation ullamco',
-                margin: '0 40 -60 40',
+                margin: '-10 40 -20 40',
                 style: 'text-align: center;\r\ncolor: #555555;\r\nfont-size: 12px;'
             },
             {
                 xtype: 'button',
                 cls: 'signup-btn',
                 itemId: 'signup',
-                margin: '0 0 10 0',
                 text: ''
             },
             {
                 xtype: 'button',
                 cls: 'login-btn',
                 itemId: 'signin',
+                margin: '10 0 0 0',
                 text: ''
             }
         ],

@@ -19,7 +19,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top"
+                "docked": "top",
+                "style": "border:none"
             },
             "designerId": "7c4cbc9b-5a5e-4cff-9ddb-419f87c39690",
             "cn": [
@@ -62,6 +63,7 @@
                 "centered": null,
                 "docked": null,
                 "height": 40,
+                "itemId": "mybutton5",
                 "margin": "20 30",
                 "style": [
                     "color: #8fced6;\r",
@@ -75,7 +77,27 @@
             "configAlternates": {
                 "style": "object"
             },
-            "designerId": "24ed5b87-9de1-4893-a672-c4000c60393b"
+            "designerId": "24ed5b87-9de1-4893-a672-c4000c60393b",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMybutton5Tap",
+                        "implHandler": [
+                            "Ext.Viewport.setActiveItem({\r",
+                            "    xtype: 'login'\r",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "260da240-4a98-4da9-900e-57ce4a9ba4a9"
+                }
+            ]
         }
     ]
 }

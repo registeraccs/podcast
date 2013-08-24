@@ -20,7 +20,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top"
+                "container|align": "center",
+                "container|pack": "center",
+                "docked": "top",
+                "style": "border:none"
             },
             "designerId": "0efdd665-c886-4ac9-b4ac-17183ee0d068",
             "cn": [
@@ -32,19 +35,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": 1,
+                        "docked": null,
+                        "style": null,
                         "width": null,
-                        "label": ""
+                        "label": "",
+                        "name": ""
                     },
                     "designerId": "4b665f9d-a7da-48df-8226-799986d1be4d"
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "2a4b150c-1a17-4080-8231-c7ff789978a3"
                 },
                 {
                     "type": "Ext.Button",
@@ -54,6 +52,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "mybutton4",
                         "style": [
                             "background: #fff;\r",
                             "color: #8fced6;\r",
@@ -64,7 +64,30 @@
                     "configAlternates": {
                         "style": "object"
                     },
-                    "designerId": "ef3d619b-f657-404f-9da9-04fd15a5f6e9"
+                    "designerId": "ef3d619b-f657-404f-9da9-04fd15a5f6e9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton4Tap",
+                                "implHandler": [
+                                    "var me = this;\r",
+                                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                                    "nav.push({\r",
+                                    "    xtype: 'librarysearch',\r",
+                                    "    title: 'Search Podcast URL'\r",
+                                    "});"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "537362be-01c1-447b-893e-4851676a373a"
+                        }
+                    ]
                 }
             ]
         },
@@ -87,7 +110,7 @@
                 ],
                 "selectedCls": null,
                 "store": "UnplayedStore",
-                "itemHeight": 90
+                "itemHeight": 70
             },
             "designerId": "d4b680b0-feb8-4262-8048-8b73d4c361d2",
             "cn": [
@@ -100,7 +123,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"80\" height=\"80\"/>\r",
+                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
                             "<div class=\"list-info\">\r",
                             "\t<div class=\"podcast-name\">{name}</div>\r",
                             "    <tpl if=\"type == 'music'\">\r",

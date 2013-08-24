@@ -22,6 +22,7 @@ Ext.define('MyApp.view.Setting', {
             {
                 xtype: 'toolbar',
                 docked: 'top',
+                style: 'border:none',
                 items: [
                     {
                         xtype: 'label',
@@ -38,11 +39,25 @@ Ext.define('MyApp.view.Setting', {
             {
                 xtype: 'button',
                 height: 40,
+                itemId: 'mybutton5',
                 margin: '20 30',
                 style: 'color: #8fced6;\r\nbackground: #fff;\r\nborder:none;\r\nfont-size: 14px;',
                 text: 'Log Out'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onMybutton5Tap',
+                event: 'tap',
+                delegate: '#mybutton5'
+            }
         ]
+    },
+
+    onMybutton5Tap: function(button, e, eOpts) {
+        Ext.Viewport.setActiveItem({
+            xtype: 'login'
+        });
     }
 
 });

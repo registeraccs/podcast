@@ -30,7 +30,8 @@
                     "border: none;\r",
                     "background: #8fced6;"
                 ],
-                "designer|displayName": "SearchBar"
+                "designer|displayName": "SearchBar",
+                "scrollable": null
             },
             "configAlternates": {
                 "style": "object"
@@ -80,7 +81,7 @@
                         "right": null,
                         "ui": "light",
                         "hideOnMaskTap": false,
-                        "scrollable": false
+                        "scrollable": null
                     },
                     "designerId": "64dad0dc-2dc8-409c-9a57-093fdad1a61b",
                     "cn": [
@@ -274,7 +275,7 @@
                         ],
                         "selectedCls": null,
                         "store": "PodcastStore",
-                        "itemHeight": 90
+                        "itemHeight": 70
                     },
                     "designerId": "e8fbf8f4-9733-43e7-8fb5-d5769f1d3cbf",
                     "cn": [
@@ -287,7 +288,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "implHandler": [
-                                    "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"80\" height=\"80\"/>\r",
+                                    "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
                                     "<div class=\"list-info\">\r",
                                     "\t<div class=\"podcast-name\">{name}</div>\r",
                                     "    <div class=\"music-toal\">5</div>\r",
@@ -333,7 +334,7 @@
                             "userConfig": {
                                 "implHandler": [
                                     "<div class=\"pview\">\r",
-                                    "\t<img class=\"shadow\" src=\"{photo_url}\" width=\"130\" height=\"130\"/>\r",
+                                    "\t<img class=\"shadow\" src=\"{photo_url}\" width=\"90\" height=\"90\"/>\r",
                                     "    <div class=\"unplayed-label-box\">\r",
                                     "        <span >4</span>\r",
                                     "    </div>\r",

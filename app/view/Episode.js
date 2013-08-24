@@ -18,26 +18,20 @@ Ext.define('MyApp.view.Episode', {
     alias: 'widget.episode',
 
     config: {
-        layout: {
-            type: 'vbox'
-        },
         items: [
             {
                 xtype: 'container',
-                flex: 0.2,
+                docked: 'top',
                 style: 'background: #8fced6',
-                layout: {
-                    type: 'vbox'
-                },
                 items: [
                     {
                         xtype: 'container',
                         html: '<div class="episode-title">Random Access Memories Episode 3</div> <div class="music-toal-white">1 hour 12 min</div> <div class="calendar-white">12.02.2013</div>',
-                        margin: '20 10'
+                        padding: '10 10 20 10'
                     },
                     {
                         xtype: 'button',
-                        margin: '0 10 20 10',
+                        margin: '0 10 10 10',
                         style: 'color: #8fced6;\r\nbackground: #fff;\r\nborder:none;\r\nfont-size: 14px;',
                         text: 'Mark as Played'
                     }
@@ -45,11 +39,15 @@ Ext.define('MyApp.view.Episode', {
             },
             {
                 xtype: 'container',
-                flex: 1,
+                docked: 'top',
+                height: '100%',
                 html: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.<br/><br/> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
-                padding: '20 10 0 10',
+                padding: '10 10 0 10',
                 style: 'color: #555555;\r\nfont-size: 12px;',
-                scrollable: 'vertical'
+                layout: {
+                    type: 'fit'
+                },
+                scrollable: true
             }
         ]
     }

@@ -7,8 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Episode",
-        "designer|userAlias": "episode",
-        "layout": "vbox"
+        "designer|userAlias": "episode"
     },
     "designerId": "ce0f6ca5-d437-4eb3-ab6e-8135837e1776",
     "cn": [
@@ -20,9 +19,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 0.2,
-                "style": "background: #8fced6",
-                "layout": "vbox"
+                "docked": "top",
+                "style": "background: #8fced6"
             },
             "designerId": "6f1f7835-0e87-4118-8424-59440fd56289",
             "cn": [
@@ -37,7 +35,8 @@
                         "docked": null,
                         "height": null,
                         "html": "<div class=\"episode-title\">Random Access Memories Episode 3</div> <div class=\"music-toal-white\">1 hour 12 min</div> <div class=\"calendar-white\">12.02.2013</div>",
-                        "margin": "20 10",
+                        "margin": null,
+                        "padding": "10 10 20 10",
                         "style": null
                     },
                     "designerId": "3593b712-d1df-4d22-aa60-a3bb24386bcf"
@@ -53,7 +52,7 @@
                         "centered": null,
                         "docked": null,
                         "height": null,
-                        "margin": "0 10 20 10",
+                        "margin": "0 10 10 10",
                         "style": [
                             "color: #8fced6;\r",
                             "background: #fff;\r",
@@ -78,14 +77,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "docked": "top",
+                "height": "100%",
                 "html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.<br/><br/> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
-                "padding": "20 10 0 10",
+                "padding": "10 10 0 10",
                 "style": [
                     "color: #555555;\r",
                     "font-size: 12px;"
                 ],
-                "scrollable": "vertical"
+                "layout": "fit",
+                "scrollable": true
             },
             "configAlternates": {
                 "style": "object"

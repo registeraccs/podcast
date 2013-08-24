@@ -22,13 +22,13 @@ Ext.define('MyApp.view.Unplayed', {
         layout: {
             type: 'fit'
         },
-        scrollable: 'vertical',
+        scrollable: false,
         items: [
             {
                 xtype: 'list',
-                scrollable: 'vertical',
+                scrollable: true,
                 itemTpl: [
-                    '<img class="photo shadow" src="{photo_url}" width="80" height="80"/>',
+                    '<img class="photo shadow" src="{photo_url}" width="60" height="60"/>',
                     '<div class="list-info">',
                     '	<div class="podcast-name">{name}</div>',
                     '    <tpl if="type == \'music\'">',
@@ -44,7 +44,7 @@ Ext.define('MyApp.view.Unplayed', {
                     ''
                 ],
                 store: 'UnplayedStore',
-                itemHeight: 90
+                itemHeight: 70
             }
         ]
     }

@@ -46,13 +46,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "baseCls": null,
                         "centered": true,
                         "cls": [
-                            "logo"
+                            "mobile-logo"
                         ],
                         "id": null,
                         "itemId": null,
-                        "designer|displayName": "logo"
+                        "designer|displayName": "logo",
+                        "designer|createAlias": null
                     },
                     "designerId": "204ae91a-4d42-4328-9294-80511a406311"
                 }
@@ -68,7 +70,7 @@
             "userConfig": {
                 "docked": "top",
                 "html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad veniam, quis nostrud exercitation ullamco",
-                "margin": "0 40 -60 40",
+                "margin": "-10 40 -20 40",
                 "style": [
                     "text-align: center;\r",
                     "color: #555555;\r",
@@ -96,7 +98,7 @@
                 ],
                 "docked": null,
                 "itemId": "signup",
-                "margin": "0 0 10 0",
+                "margin": null,
                 "designer|displayName": "signup",
                 "text": ""
             },
@@ -115,7 +117,7 @@
                 ],
                 "docked": null,
                 "itemId": "signin",
-                "margin": null,
+                "margin": "10 0 0 0",
                 "designer|displayName": "login",
                 "text": ""
             },
@@ -130,6 +132,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "fn": "onSigninTap",
+                        "implHandler": [
+                            ""
+                        ],
                         "name": "tap"
                     },
                     "designerId": "c88c8542-8258-4052-8c88-8250d3e4fd54"

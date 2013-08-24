@@ -19,7 +19,7 @@ Ext.define('MyApp.view.MyTab', {
 
     requires: [
         'MyApp.view.Podcast',
-        'MyApp.view.Library',
+        'MyApp.view.Category',
         'MyApp.view.Setting'
     ],
 
@@ -27,7 +27,12 @@ Ext.define('MyApp.view.MyTab', {
         tabBar: {
             docked: 'bottom',
             itemId: 'mytabbar',
-            style: 'background: #fff;'
+            style: 'background: #fff;border:none;',
+            layout: {
+                align: 'center',
+                pack: 'center',
+                type: 'hbox'
+            }
         },
         items: [
             {
@@ -36,10 +41,9 @@ Ext.define('MyApp.view.MyTab', {
                 iconCls: 'music'
             },
             {
-                xtype: 'library',
-                itemId: 'library',
-                title: '',
-                iconCls: 'list'
+                xtype: 'category',
+                iconCls: 'bookmarks',
+                itemId: 'category'
             },
             {
                 xtype: 'setting',
@@ -52,12 +56,12 @@ Ext.define('MyApp.view.MyTab', {
             {
                 fn: 'onContainerActivate',
                 event: 'activate',
-                delegate: '#library'
+                delegate: '#category'
             },
             {
                 fn: 'onContainerDeactivate',
                 event: 'deactivate',
-                delegate: '#library'
+                delegate: '#category'
             },
             {
                 fn: 'onContainerActivate1',

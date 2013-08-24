@@ -5,16 +5,20 @@
      * Logo
      */
     .logo {
-        background: transparent url('../images/logo.png') no-repeat center center;
-        background-size: 156px 157px;
-        width: 156px;
-        height: 157px;
+        background: transparent url('../images/logo@2x.png') no-repeat center center;
+        background-size: 200px 201px;
+        width: 200px;
+        height: 201px;
     }
     
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-        .logo {
-            background-image: url('../images/logo@2x.png');
-        }
+    /*
+     * Logo
+     */
+    .mobile-logo {
+        background: transparent url('../images/logo.png') no-repeat center center;
+        background-size: 110px 111px;
+        width: 110px;
+        height: 111px;
     }
     
     /**
@@ -22,16 +26,16 @@
      */
     .login-btn {
         background: transparent url('../images/login.png') no-repeat center center;
-        background-size: 200px 43px;
-        width: 200px;
-        height: 43px;
+        background-size: 170px 37px;
+        width: 170px;
+        height: 37px;
     }
     
     .signup-btn {
         background: transparent url('../images/signup.png') no-repeat center center;
-        background-size: 200px 43px;
-        width: 200px;
-        height: 43px    ;
+        background-size: 170px 37px;
+        width: 170px;
+        height: 37px    ;
     }
     
     .help-line {
@@ -172,4 +176,7 @@
     line-height: 15px;
     font-weight: bold;
     float: left;
+}
+.x-button-back.x-button.x-button-pressing, .x-button.x-button-pressing:after, .x-button.x-button-pressed, .x-button.x-button-pressed:after{
+    background: #8FCED6;
 }

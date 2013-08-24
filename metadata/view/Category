@@ -6,13 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "itemId": "unplayedview",
-        "designer|userClassName": "Unplayed",
-        "designer|userAlias": "unplayed",
+        "itemId": null,
+        "designer|userClassName": "Category",
+        "designer|userAlias": "category",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
-    "designerId": "e8aa058b-3164-442a-b710-ee0c56fc93c2",
+    "designerId": "e4c1a7df-a085-4495-a99d-7cda7983bcac",
     "cn": [
         {
             "type": "Ext.dataview.List",
@@ -25,6 +25,7 @@
                 "border": null,
                 "docked": null,
                 "height": null,
+                "itemId": "mylist4",
                 "style": null,
                 "ui": null,
                 "designer|displayName": "Plist",
@@ -35,7 +36,7 @@
                 "store": "UnplayedStore",
                 "itemHeight": 70
             },
-            "designerId": "d0c6143a-9095-45ab-9cf5-c6918c264668",
+            "designerId": "ece4b71e-d84a-4e2b-ac40-6484d482ac3d",
             "cn": [
                 {
                     "type": "Ext.XTemplate",
@@ -46,7 +47,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
                             "<div class=\"list-info\">\r",
                             "\t<div class=\"podcast-name\">{name}</div>\r",
                             "    <tpl if=\"type == 'music'\">\r",
@@ -63,7 +63,28 @@
                         ],
                         "designer|displayName": "itemTpl"
                     },
-                    "designerId": "d2c04ce2-758f-4d9e-a079-2f98f0a5bcf8"
+                    "designerId": "d7762b41-5e98-4306-93a8-b25284abebe1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMylist4ItemTap",
+                        "implHandler": [
+                            "var me = this;\r",
+                            "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                            "nav.push({\r",
+                            "    xtype: 'library',\r",
+                            "    title: 'Podcasts Library'\r",
+                            "});"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "92311238-9105-4810-b9ba-a1a8dd1e648e"
                 }
             ]
         }
