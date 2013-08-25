@@ -22,7 +22,6 @@ Ext.define('MyApp.view.Unplayed', {
         layout: {
             type: 'fit'
         },
-        scrollable: false,
         items: [
             {
                 xtype: 'list',

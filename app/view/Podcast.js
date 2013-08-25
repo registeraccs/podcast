@@ -106,8 +106,7 @@ Ext.define('MyApp.view.Podcast', {
                         itemId: 'unplayedbtnright',
                         style: 'color: #fff',
                         ui: 'plain',
-                        width: 48,
-                        text: '14'
+                        width: 48
                     }
                 ]
             },
@@ -126,14 +125,17 @@ Ext.define('MyApp.view.Podcast', {
                         itemId: 'mylist',
                         scrollable: 'vertical',
                         itemTpl: [
-                            '<img class="photo shadow" src="{photo_url}" width="60" height="60"/>',
+                            '<img class="photo shadow" src="{podcast_thumbnail}" width="60" height="60"/>',
                             '<div class="list-info">',
-                            '	<div class="podcast-name">{name}</div>',
-                            '    <div class="music-toal">5</div>',
-                            '    <div class="video-toal">10</div>',
+                            '	<div class="podcast-name">{podcast_name}</div>',
+                            '    <tpl if="podcast_type === 0">',
+                            '    	<div class="music-toal">5</div>',
+                            '	<tpl else>',
+                            '    	<div class="video-toal">10</div>',
+                            '	</tpl>',
                             '</div>',
                             '<div class="unplayed-label">',
-                            '	<span >4</span>',
+                            '<span >{episodes.unwatched}</span>',
                             '</div>',
                             ''
                         ],
@@ -142,15 +144,16 @@ Ext.define('MyApp.view.Podcast', {
                     },
                     {
                         xtype: 'dataview',
+                        itemId: 'mydataview',
                         margin: 5,
                         ui: '',
                         scrollable: 'vertical',
                         inline: true,
                         itemTpl: [
                             '<div class="pview">',
-                            '	<img class="shadow" src="{photo_url}" width="90" height="90"/>',
+                            '	<img class="shadow" src="{podcast_thumbnail}" width="90" height="90"/>',
                             '    <div class="unplayed-label-box">',
-                            '        <span >4</span>',
+                            '        <span >{episodes.unwatched}</span>',
                             '    </div>',
                             '',
                             '</div>',
@@ -166,6 +169,10 @@ Ext.define('MyApp.view.Podcast', {
                 fn: 'onBoxbtnTap',
                 event: 'tap',
                 delegate: '#boxbtn'
+            },
+            {
+                fn: 'onContainerInitialize',
+                event: 'initialize'
             }
         ]
     },
@@ -174,6 +181,11 @@ Ext.define('MyApp.view.Podcast', {
         var me = this;
         var podcastcontent = Ext.ComponentQuery.query('#podcastcontent')[0];
         podcastcontent.setActiveItem(1);
+    },
+
+    onContainerInitialize: function(component, eOpts) {
+        var store = Ext.StoreMgr.lookup('PodcastStore');
+        store.load();
     }
 
 });

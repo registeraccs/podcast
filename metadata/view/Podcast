@@ -228,7 +228,7 @@
                         "ui": "plain",
                         "width": 48,
                         "designer|displayName": "unplayedbtn",
-                        "text": "14"
+                        "text": null
                     },
                     "designerId": "12b8964e-55ed-4d3d-92f5-293270de290d"
                 }
@@ -288,14 +288,17 @@
                             "codeClass": null,
                             "userConfig": {
                                 "implHandler": [
-                                    "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
+                                    "<img class=\"photo shadow\" src=\"{podcast_thumbnail}\" width=\"60\" height=\"60\"/>\r",
                                     "<div class=\"list-info\">\r",
-                                    "\t<div class=\"podcast-name\">{name}</div>\r",
-                                    "    <div class=\"music-toal\">5</div>\r",
-                                    "    <div class=\"video-toal\">10</div>\r",
+                                    "\t<div class=\"podcast-name\">{podcast_name}</div>\r",
+                                    "    <tpl if=\"podcast_type === 0\">\r",
+                                    "    \t<div class=\"music-toal\">5</div>\r",
+                                    "\t<tpl else>\r",
+                                    "    \t<div class=\"video-toal\">10</div>\r",
+                                    "\t</tpl>\r",
                                     "</div>\r",
                                     "<div class=\"unplayed-label\">\r",
-                                    "\t<span >4</span>\r",
+                                    "<span >{episodes.unwatched}</span>\r",
                                     "</div>\r",
                                     ""
                                 ],
@@ -313,6 +316,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "mydataview",
                         "margin": 5,
                         "ui": "",
                         "designer|displayName": "Pview",
@@ -334,9 +338,9 @@
                             "userConfig": {
                                 "implHandler": [
                                     "<div class=\"pview\">\r",
-                                    "\t<img class=\"shadow\" src=\"{photo_url}\" width=\"90\" height=\"90\"/>\r",
+                                    "\t<img class=\"shadow\" src=\"{podcast_thumbnail}\" width=\"90\" height=\"90\"/>\r",
                                     "    <div class=\"unplayed-label-box\">\r",
-                                    "        <span >4</span>\r",
+                                    "        <span >{episodes.unwatched}</span>\r",
                                     "    </div>\r",
                                     "\r",
                                     "</div>\r",
@@ -349,6 +353,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerInitialize",
+                "implHandler": [
+                    "var store = Ext.StoreMgr.lookup('PodcastStore');\r",
+                    "store.load();"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "ece5cbbc-1468-4180-a88b-780b76ba3e06"
         }
     ]
 }

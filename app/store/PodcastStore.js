@@ -18,120 +18,57 @@ Ext.define('MyApp.store.PodcastStore', {
     alias: 'store.podcaststore',
 
     config: {
-        autoLoad: true,
-        data: [
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms',
-                name: 'Sunny\'s Bar',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '253 Conover St'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/Tz0vtUWDjb_u-XkrRbv5EA/ms',
-                name: 'Duff\'s Brooklyn',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '168 Marcy Ave'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/wv7XY2ENy4HD6ZufRCnXvA/ms',
-                name: 'Vin Sur Vingt',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '201 W 11th St'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms',
-                name: 'Lucky 13 Saloon',
-                rating_img_url_small: 'http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png',
-                address1: '273 13th St'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/KGV5uYP6ptUfls13ZlsEfg/ms',
-                name: 'Sunny\'s Bar',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '253 Conover St'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms',
-                name: 'Duff\'s Brooklyn',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '168 Marcy Ave'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms',
-                name: 'Vin Sur Vingt',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '201 W 11th St'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms',
-                name: 'Lucky 13 Saloon',
-                rating_img_url_small: 'http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png',
-                address1: '273 13th St'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/K_23zz6O6SeN1gX8Y5h8hA/ms',
-                name: 'Sunny\'s Bar',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '253 Conover St'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/bJT-SPJrjTIi6K8ehqwnXQ/ms',
-                name: 'Duff\'s Brooklyn',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '168 Marcy Ave'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms',
-                name: 'Vin Sur Vingt',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '201 W 11th St'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/KtdHatgh-koBoQ9HrpNWLA/ms',
-                name: 'Lucky 13 Saloon',
-                rating_img_url_small: 'http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png',
-                address1: '273 13th St'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/d_osp98Jw_sdLNyOqeitbQ/ms',
-                name: 'Sunny\'s Bar',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '253 Conover St'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms',
-                name: 'Duff\'s Brooklyn',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '168 Marcy Ave'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms',
-                name: 'Vin Sur Vingt',
-                rating_img_url_small: 'http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png',
-                address1: '201 W 11th St'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms',
-                name: 'Lucky 13 Saloon',
-                rating_img_url_small: 'http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png',
-                address1: '273 13th St'
-            },
-            
-        ],
         storeId: 'PodcastStore',
         fields: [
             {
-                name: 'photo_url'
+                name: 'podcast_id'
             },
             {
-                name: 'name'
+                name: 'podcast_name'
             },
             {
-                name: 'rating_img_url_small'
+                name: 'podcast_thumbnail'
             },
             {
-                name: 'address1'
+                name: 'podcast_type'
+            },
+            {
+                name: 'podcast_description'
+            },
+            {
+                name: 'podcast_category'
+            },
+            {
+                name: 'podcast_subscribe'
+            },
+            {
+                name: 'episodes'
+            }
+        ],
+        proxy: {
+            type: 'ajax',
+            url: 'http://app.dev/podcast/mypodcast.php',
+            reader: {
+                type: 'json',
+                rootProperty: 'rows'
+            }
+        },
+        listeners: [
+            {
+                fn: 'onStoreLoad',
+                event: 'load'
             }
         ]
+    },
+
+    onStoreLoad: function(store, records, successful, operation, eOpts) {
+        var unwatched = 0;
+        store.each(function(rec) {        
+            var epi = rec.get('episodes');
+            unwatched+= epi.unwatched;
+        });
+
+        Ext.ComponentQuery.query('#unplayedbtnright')[0].setText(unwatched);
     }
+
 });

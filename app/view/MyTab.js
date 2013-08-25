@@ -42,8 +42,8 @@ Ext.define('MyApp.view.MyTab', {
             },
             {
                 xtype: 'category',
-                iconCls: 'bookmarks',
-                itemId: 'category'
+                itemId: 'category',
+                iconCls: 'list'
             },
             {
                 xtype: 'setting',

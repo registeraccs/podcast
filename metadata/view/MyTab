@@ -53,8 +53,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "bookmarks",
-                "itemId": "category"
+                "itemId": "category",
+                "iconCls": "list"
             },
             "designerId": "ee455a57-c240-489e-92d9-aee167c5a336",
             "masterInstanceId": "e4c1a7df-a085-4495-a99d-7cda7983bcac",

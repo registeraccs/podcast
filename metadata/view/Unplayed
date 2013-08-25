@@ -10,7 +10,7 @@
         "designer|userClassName": "Unplayed",
         "designer|userAlias": "unplayed",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "designerId": "e8aa058b-3164-442a-b710-ee0c56fc93c2",
     "cn": [

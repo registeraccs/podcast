@@ -36,6 +36,9 @@ Ext.define('MyApp.controller.MyController', {
             "list#mylist2": {
                 itemtap: 'onEpisodesTap',
                 itemtaphold: 'onMylist2ItemTaphold'
+            },
+            "dataview#mydataview": {
+                itemtap: 'onMydataviewItemTap'
             }
         }
     },
@@ -91,6 +94,15 @@ Ext.define('MyApp.controller.MyController', {
         nav.push({
             xtype: 'video',
             title: 'Video'
+        });
+    },
+
+    onMydataviewItemTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'episodes',
+            title: 'Episodes'
         });
     },
 

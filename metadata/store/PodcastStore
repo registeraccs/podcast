@@ -6,27 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
-        "data": [
-            "[\r",
-            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
-            "\t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/Tz0vtUWDjb_u-XkrRbv5EA/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
-            "  \t{ photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/wv7XY2ENy4HD6ZufRCnXvA/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
-            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
-            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/KGV5uYP6ptUfls13ZlsEfg/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
-            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
-            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
-            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/K_23zz6O6SeN1gX8Y5h8hA/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/bJT-SPJrjTIi6K8ehqwnXQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
-            "  \t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
-            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/KtdHatgh-koBoQ9HrpNWLA/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
-            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/d_osp98Jw_sdLNyOqeitbQ/ms\", name: \"Sunny's Bar\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"253 Conover St\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"168 Marcy Ave\"},\r",
-            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , rating_img_url_small: \"http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png\", address1: \"201 W 11th St\"},\r",
-            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , rating_img_url_small: \"http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png\", address1: \"273 13th St\"},\r",
-            "]"
-        ],
+        "autoLoad": null,
+        "data": null,
         "storeId": "PodcastStore",
         "designer|userClassName": "PodcastStore",
         "designer|userAlias": "podcaststore"
@@ -41,7 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "photo_url"
+                "name": "podcast_id"
             },
             "designerId": "a0354acd-5d68-4480-87bc-51ef03c946ca"
         },
@@ -53,7 +34,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "name"
+                "name": "podcast_name"
             },
             "designerId": "64a78de0-3404-44ca-8de8-f356d3195c89"
         },
@@ -65,7 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "rating_img_url_small"
+                "name": "podcast_thumbnail"
             },
             "designerId": "9909cae2-058a-46cb-811e-def7756fd0f7"
         },
@@ -77,9 +58,105 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "address1"
+                "name": "podcast_type"
             },
             "designerId": "c260400e-0798-46f8-909c-942bbdd4f2b0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_description"
+            },
+            "designerId": "d7e66e45-52b5-4721-b5e7-1a8192929a2a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_category"
+            },
+            "designerId": "c615ab3d-6761-4ae5-930d-58e69b4bfb6a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_subscribe"
+            },
+            "designerId": "90c9bd80-dfef-4b6a-84ad-c42f0f2f14fc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episodes"
+            },
+            "designerId": "f7e29800-b0be-495f-b6a6-b90d005902ac"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://app.dev/podcast/mypodcast.php"
+            },
+            "designerId": "c58ddf0d-4de7-426e-94bd-a40f93e2e0a9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "ec0266a9-52d7-4c8b-906e-cf77a07226ec"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "var unwatched = 0;\r",
+                    "store.each(function(rec) {        \r",
+                    "    var epi = rec.get('episodes');\r",
+                    "    unwatched+= epi.unwatched;\r",
+                    "});\r",
+                    "\r",
+                    "Ext.ComponentQuery.query('#unplayedbtnright')[0].setText(unwatched);"
+                ],
+                "name": "load"
+            },
+            "designerId": "1ecc1f91-af2b-412f-9ddf-1159d8583a24"
         }
     ]
 }

@@ -180,6 +180,29 @@
                 "designer|controlQuery": "list#mylist2"
             },
             "designerId": "0c2300f7-eb31-447b-a2b2-3a8251b38ecf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMydataviewItemTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "nav.push({\r",
+                    "    xtype: 'episodes',\r",
+                    "    title: 'Episodes'\r",
+                    "});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview#mydataview"
+            },
+            "designerId": "b32c1bea-fd7a-4bc9-8589-3eb954917806"
         }
     ]
 }
