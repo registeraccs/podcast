@@ -117,7 +117,7 @@
                     "userConfig": {
                         "implHandler": [
                             "<tpl if=\"episode_html != ''\">\r",
-                            "    {episode_html}\t    \r",
+                            "    <div style=\"min-height: 125px;\">{episode_html}</div>\r",
                             "<tpl else>\r",
                             "\t<img class=\"photo shadow\" src=\"{episode_thumbnail}\" width=\"60\" height=\"60\"/>\r",
                             "    <div class=\"list-info\">\r",

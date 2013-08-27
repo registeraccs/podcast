@@ -180,3 +180,6 @@
 .x-button-back.x-button.x-button-pressing, .x-button.x-button-pressing:after, .x-button.x-button-pressed, .x-button.x-button-pressed:after{
     background: #8FCED6;
 }
+.x-scroll-bar-y.active {
+  width: 0px; /*CHANGE: replace width: 6px;*/
+}

@@ -51,7 +51,7 @@ Ext.define('MyApp.view.Episodes', {
                 scrollable: true,
                 itemTpl: [
                     '<tpl if="episode_html != \'\'">',
-                    '    {episode_html}	    ',
+                    '    <div style="min-height: 125px;">{episode_html}</div>',
                     '<tpl else>',
                     '	<img class="photo shadow" src="{episode_thumbnail}" width="60" height="60"/>',
                     '    <div class="list-info">',
