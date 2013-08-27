@@ -149,6 +149,14 @@
                 "app/view/LibrarySearch.js"
             ],
             "className": "LibrarySearch"
+        },
+        "6c8496a8-a5d7-422e-a91e-d53c0db4b032": {
+            "paths": [
+                "metadata/store/EpisodesStore",
+                "app/store/override/EpisodesStore.js",
+                "app/store/EpisodesStore.js"
+            ],
+            "className": "EpisodesStore"
         }
     },
     "viewOrderMap": {
@@ -169,6 +177,7 @@
         ],
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",
+            "6c8496a8-a5d7-422e-a91e-d53c0db4b032",
             "2db60447-b3b4-4db9-8e2c-66f126736157"
         ],
         "controller": [

@@ -19,9 +19,14 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    viewport: {
+        autoMaximize: true
+    },
+
     stores: [
         'PodcastStore',
-        'UnplayedStore'
+        'UnplayedStore',
+        'EpisodesStore'
     ],
     views: [
         'Login',

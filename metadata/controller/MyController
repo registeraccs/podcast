@@ -118,6 +118,13 @@
                 "fn": "onMyPodCastTap",
                 "implHandler": [
                     "var me = this;\r",
+                    "//get episodes\r",
+                    "var store = Ext.StoreMgr.lookup('EpisodesStore');\r",
+                    "proxy= store.getProxy();\r",
+                    "proxy.setExtraParam('podcast_id', record.get('podcast_id') );\r",
+                    "store.load();\r",
+                    "\r",
+                    "//load view\r",
                     "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
                     "nav.push({\r",
                     "    xtype: 'episodes',\r",

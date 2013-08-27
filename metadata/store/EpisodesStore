@@ -8,11 +8,11 @@
     "userConfig": {
         "autoLoad": null,
         "data": null,
-        "storeId": "PodcastStore",
-        "designer|userClassName": "PodcastStore",
-        "designer|userAlias": "podcaststore"
+        "storeId": "EpisodesStore",
+        "designer|userClassName": "EpisodesStore",
+        "designer|userAlias": null
     },
-    "designerId": "046a2eff-8f2e-4065-9160-89a38a578f9f",
+    "designerId": "6c8496a8-a5d7-422e-a91e-d53c0db4b032",
     "cn": [
         {
             "type": "Ext.data.Field",
@@ -22,9 +22,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_id"
+                "name": "episode_id"
             },
-            "designerId": "a0354acd-5d68-4480-87bc-51ef03c946ca"
+            "designerId": "9de572a5-aa60-4825-8963-d4f061a11936"
         },
         {
             "type": "Ext.data.Field",
@@ -34,9 +34,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_name"
+                "name": "episode_name"
             },
-            "designerId": "64a78de0-3404-44ca-8de8-f356d3195c89"
+            "designerId": "376e9d19-a028-481f-a792-979ccee562cf"
         },
         {
             "type": "Ext.data.Field",
@@ -46,9 +46,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_thumbnail"
+                "name": "episode_thumbnail"
             },
-            "designerId": "9909cae2-058a-46cb-811e-def7756fd0f7"
+            "designerId": "db971a7f-a850-48d0-9e53-6d831230ba82"
         },
         {
             "type": "Ext.data.Field",
@@ -58,9 +58,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_type"
+                "name": "episode_html"
             },
-            "designerId": "c260400e-0798-46f8-909c-942bbdd4f2b0"
+            "designerId": "4618548f-e2b0-4dee-8c66-f7a8bffe5d9d"
         },
         {
             "type": "Ext.data.Field",
@@ -70,9 +70,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_description"
+                "dateFormat": "U",
+                "name": "episode_date",
+                "type": "date"
             },
-            "designerId": "d7e66e45-52b5-4721-b5e7-1a8192929a2a"
+            "designerId": "3a3503bd-b2f8-40c1-ac06-50eba54f52b3"
         },
         {
             "type": "Ext.data.Field",
@@ -82,9 +84,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_category"
+                "name": "episode_duration"
             },
-            "designerId": "c615ab3d-6761-4ae5-930d-58e69b4bfb6a"
+            "designerId": "356434e7-9631-46c7-8510-2fac3afbf4b9"
         },
         {
             "type": "Ext.data.Field",
@@ -94,9 +96,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "podcast_subscribe"
+                "name": "episode_type"
             },
-            "designerId": "90c9bd80-dfef-4b6a-84ad-c42f0f2f14fc"
+            "designerId": "ca8f3861-0285-45dc-bb39-b16ffe8c1609"
         },
         {
             "type": "Ext.data.Field",
@@ -106,9 +108,45 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "episodes"
+                "name": "episode_added"
             },
-            "designerId": "f7e29800-b0be-495f-b6a6-b90d005902ac"
+            "designerId": "23a767ef-b0f2-47e1-b28d-21aa7f04de69"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_description"
+            },
+            "designerId": "8cd71849-5782-401e-9dd4-79951af28686"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_played"
+            },
+            "designerId": "858513a4-ddc8-40d4-9ce6-d9fdcc36fc23"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_time_played"
+            },
+            "designerId": "68e2d9af-ef02-45f0-88b3-d067cd248fa4"
         },
         {
             "type": "Ext.data.proxy.Ajax",
@@ -118,9 +156,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "mypodcast.php"
+                "extraParams": null,
+                "url": "episodes.php"
             },
-            "designerId": "c58ddf0d-4de7-426e-94bd-a40f93e2e0a9",
+            "designerId": "373b043a-af41-47b0-8a95-da696a3e1e38",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -132,31 +171,9 @@
                     "userConfig": {
                         "rootProperty": "rows"
                     },
-                    "designerId": "ec0266a9-52d7-4c8b-906e-cf77a07226ec"
+                    "designerId": "efce97d9-068a-4fc0-9659-388852ca5537"
                 }
             ]
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onStoreLoad",
-                "implHandler": [
-                    "var unwatched = 0;\r",
-                    "store.each(function(rec) {        \r",
-                    "    var epi = rec.get('episodes');\r",
-                    "    unwatched+= epi.unwatched;\r",
-                    "});\r",
-                    "\r",
-                    "Ext.ComponentQuery.query('#unplayedbtnright')[0].setText(unwatched);"
-                ],
-                "name": "load"
-            },
-            "designerId": "1ecc1f91-af2b-412f-9ddf-1159d8583a24"
         }
     ]
 }

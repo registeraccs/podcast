@@ -84,29 +84,6 @@
             ]
         },
         {
-            "type": "Ext.Container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "top",
-                "height": 80,
-                "html": "<p> \t<div style=\"float: left; text-align:center;\"> \t    <img width=\"100px\" height=\"100px\" src=\"http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms\" style=\"margin: 5px 10px 5px 5px;\"> \t    <div><span style=\"float: none\" class=\"music-toal\">5</span><span style=\"float: none\" class=\"video-toal\">10</span></div> \t</div> \tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.  more  </p>",
-                "style": [
-                    "color: #555555;\r",
-                    "font-size: 12px;"
-                ],
-                "ui": "",
-                "scrollable": true
-            },
-            "configAlternates": {
-                "style": "object"
-            },
-            "designerId": "f435c772-91e1-4813-b222-d25fa148386b"
-        },
-        {
             "type": "Ext.dataview.List",
             "reference": {
                 "name": "items",
@@ -118,14 +95,14 @@
                 "docked": "top",
                 "height": "100%",
                 "itemId": "mylist2",
-                "style": null,
+                "style": "font-size: 12px",
                 "ui": null,
                 "designer|displayName": "Plist",
                 "scrollable": [
                     "true"
                 ],
                 "selectedCls": null,
-                "store": "UnplayedStore",
+                "store": "EpisodesStore",
                 "itemHeight": 70
             },
             "designerId": "0ed5da8a-5873-4226-a476-145e6ae41f83",
@@ -139,19 +116,24 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<img class=\"photo shadow\" src=\"{photo_url}\" width=\"60\" height=\"60\"/>\r",
-                            "<div class=\"list-info\">\r",
-                            "\t<div class=\"podcast-name\">{name}</div>\r",
-                            "    <tpl if=\"type == 'music'\">\r",
-                            "        <div class=\"music-box\">\r",
-                            "            <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{date}</span>\r",
-                            "        </div>\r",
-                            "    <tpl else>\r",
-                            "        <div class=\"video-box\">\r",
-                            "            <span class=\"video-icon-grey\"></span><span class=\"video-date\">{date}</span>\r",
-                            "        </div>\r",
-                            "    </tpl>\r",
-                            "</div>\r",
+                            "<tpl if=\"episode_html != ''\">\r",
+                            "    {episode_html}\t    \r",
+                            "<tpl else>\r",
+                            "\t<img class=\"photo shadow\" src=\"{episode_thumbnail}\" width=\"60\" height=\"60\"/>\r",
+                            "    <div class=\"list-info\">\r",
+                            "        <div class=\"podcast-name\">{episode_name}</div>\r",
+                            "        <tpl if=\"episode_type == 0\">\r",
+                            "            <div class=\"music-box\">\r",
+                            "                <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{episode_date:date(\"m.d.Y\")}</span>\r",
+                            "            </div>\r",
+                            "        <tpl else>\r",
+                            "            <div class=\"video-box\">\r",
+                            "                <span class=\"video-icon-grey\"></span><span class=\"video-date\">{episode_date:date(\"m.d.Y\")}</span>\r",
+                            "            </div>\r",
+                            "        </tpl>\r",
+                            "    </div>\r",
+                            "</tpl>\r",
+                            "    \r",
                             ""
                         ],
                         "designer|displayName": "itemTpl"

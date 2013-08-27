@@ -67,6 +67,13 @@ Ext.define('MyApp.controller.MyController', {
 
     onMyPodCastTap: function(dataview, index, target, record, e, eOpts) {
         var me = this;
+        //get episodes
+        var store = Ext.StoreMgr.lookup('EpisodesStore');
+        proxy= store.getProxy();
+        proxy.setExtraParam('podcast_id', record.get('podcast_id') );
+        store.load();
+
+        //load view
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.push({
             xtype: 'episodes',

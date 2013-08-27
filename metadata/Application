@@ -8,7 +8,8 @@
     "userConfig": {
         "stores": [
             "PodcastStore",
-            "UnplayedStore"
+            "UnplayedStore",
+            "EpisodesStore"
         ],
         "views": [
             "Login",
@@ -29,5 +30,19 @@
         ],
         "name": "MyApp"
     },
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoMaximize": true
+            },
+            "designerId": "f761c412-ac94-434b-aa73-055f1519a45d"
+        }
+    ]
 }
