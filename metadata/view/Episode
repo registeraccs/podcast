@@ -7,7 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Episode",
-        "designer|userAlias": "episode"
+        "designer|userAlias": "episode",
+        "layout": "fit"
     },
     "designerId": "ce0f6ca5-d437-4eb3-ab6e-8135837e1776",
     "cn": [
@@ -20,26 +21,68 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "style": "background: #8fced6"
+                "height": 90,
+                "style": "background: #8fced6",
+                "layout": "vbox"
             },
             "designerId": "6f1f7835-0e87-4118-8424-59440fd56289",
             "cn": [
                 {
-                    "type": "Ext.Container",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": 1,
                         "docked": null,
                         "height": null,
-                        "html": "<div class=\"episode-title\">Random Access Memories Episode 3</div> <div class=\"music-toal-white\">1 hour 12 min</div> <div class=\"calendar-white\">12.02.2013</div>",
-                        "margin": null,
-                        "padding": "10 10 20 10",
-                        "style": null
+                        "html": null,
+                        "itemId": "episode_title",
+                        "margin": "10 10 0 10",
+                        "style": "font-size: 14px; font-weight: bold;"
                     },
-                    "designerId": "3593b712-d1df-4d22-aa60-a3bb24386bcf"
+                    "designerId": "669c0733-1a5d-4d67-89d7-a1ecb6189dd4"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "data": null,
+                        "docked": null,
+                        "height": null,
+                        "itemId": "episode_info",
+                        "margin": "0 10 0 10"
+                    },
+                    "designerId": "6285a504-8630-4c7a-b48f-d7a29c1fd7ff",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<tpl if=\"episode_type === 0\">\r",
+                                    "    <div class=\"music-toal-white\">{episode_duration}</div><div class=\"calendar-white\">{episode_date:date(\"m.d.Y\")}</div>\r",
+                                    "<tpl else>\r",
+                                    "    <div class=\"video-toal-white\">{episode_duration}</div><div class=\"calendar-white\">{episode_date:date(\"m.d.Y\")}</div>\r",
+                                    "</tpl>\r",
+                                    ""
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "9b4c77d9-b1ef-4580-bdda-c375cc93849a"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -49,9 +92,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
                         "centered": null,
+                        "disabled": null,
                         "docked": null,
                         "height": null,
+                        "itemId": "btnmark",
                         "margin": "0 10 10 10",
                         "style": [
                             "color: #8fced6;\r",
@@ -59,13 +105,32 @@
                             "border:none;\r",
                             "font-size: 14px;"
                         ],
+                        "ui": "action",
                         "width": null,
                         "text": "Mark as Played"
                     },
                     "configAlternates": {
                         "style": "object"
                     },
-                    "designerId": "103c043b-8d7d-41a4-9cce-995d4b45fed6"
+                    "designerId": "103c043b-8d7d-41a4-9cce-995d4b45fed6",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnmarkTap",
+                                "implHandler": [
+                                    "alert('chit di');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "c881ce71-bd8f-4039-84f6-4e8373150fe2"
+                        }
+                    ]
                 }
             ]
         },
@@ -77,9 +142,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
+                "docked": null,
                 "height": "100%",
-                "html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.<br/><br/> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+                "html": null,
+                "itemId": "episode_des",
                 "padding": "10 10 0 10",
                 "style": [
                     "color: #555555;\r",

@@ -18,30 +18,54 @@ Ext.define('MyApp.view.Episode', {
     alias: 'widget.episode',
 
     config: {
+        layout: {
+            type: 'fit'
+        },
         items: [
             {
                 xtype: 'container',
                 docked: 'top',
+                height: 90,
                 style: 'background: #8fced6',
+                layout: {
+                    type: 'vbox'
+                },
                 items: [
                     {
-                        xtype: 'container',
-                        html: '<div class="episode-title">Random Access Memories Episode 3</div> <div class="music-toal-white">1 hour 12 min</div> <div class="calendar-white">12.02.2013</div>',
-                        padding: '10 10 20 10'
+                        xtype: 'label',
+                        flex: 1,
+                        itemId: 'episode_title',
+                        margin: '10 10 0 10',
+                        style: 'font-size: 14px; font-weight: bold;'
+                    },
+                    {
+                        xtype: 'component',
+                        flex: 1,
+                        itemId: 'episode_info',
+                        margin: '0 10 0 10',
+                        tpl: [
+                            '<tpl if="episode_type === 0">',
+                            '    <div class="music-toal-white">{episode_duration}</div><div class="calendar-white">{episode_date:date("m.d.Y")}</div>',
+                            '<tpl else>',
+                            '    <div class="video-toal-white">{episode_duration}</div><div class="calendar-white">{episode_date:date("m.d.Y")}</div>',
+                            '</tpl>',
+                            ''
+                        ]
                     },
                     {
                         xtype: 'button',
+                        itemId: 'btnmark',
                         margin: '0 10 10 10',
                         style: 'color: #8fced6;\r\nbackground: #fff;\r\nborder:none;\r\nfont-size: 14px;',
+                        ui: 'action',
                         text: 'Mark as Played'
                     }
                 ]
             },
             {
                 xtype: 'container',
-                docked: 'top',
                 height: '100%',
-                html: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor nisi ut aliquip ex ea commodo consequat.<br/><br/> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
+                itemId: 'episode_des',
                 padding: '10 10 0 10',
                 style: 'color: #555555;\r\nfont-size: 12px;',
                 layout: {
@@ -49,7 +73,18 @@ Ext.define('MyApp.view.Episode', {
                 },
                 scrollable: true
             }
+        ],
+        listeners: [
+            {
+                fn: 'onBtnmarkTap',
+                event: 'tap',
+                delegate: '#btnmark'
+            }
         ]
+    },
+
+    onBtnmarkTap: function(button, e, eOpts) {
+        alert('chit di');
     }
 
 });

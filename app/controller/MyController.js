@@ -82,12 +82,27 @@ Ext.define('MyApp.controller.MyController', {
     },
 
     onEpisodesTap: function(dataview, index, target, record, e, eOpts) {
-        var me = this;
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'episode',
-            title: 'Episode Info'
-        });
+        if(index != 0){
+            var me = this;
+            var nav = Ext.ComponentQuery.query('#nav')[0];
+            nav.push({
+                xtype: 'episode',
+                title: 'Episode Info'
+            });
+
+            var episode = Ext.ComponentQuery.query('#episode_info')[0];
+            episode.setData({'episode_type':record.get('episode_type'), 'episode_duration': record.get('episode_duration'), 'episode_date': record.get('episode_date')});
+
+            var episode_title = Ext.ComponentQuery.query('#episode_title')[0];
+            episode_title.setHtml(record.get('episode_name'));
+
+            var episode_des = Ext.ComponentQuery.query('#episode_des')[0];
+            episode_des.setHtml(record.get('episode_description'));
+
+            var btnmark = Ext.ComponentQuery.query('#btnmark')[0];
+            btnmark.setDisabled(record.get('episode_played'));
+        }
+
     },
 
     onMylist2ItemTaphold: function(dataview, index, target, record, e, eOpts) {

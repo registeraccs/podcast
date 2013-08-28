@@ -71,13 +71,24 @@
     padding-left: 15px;
 }
 
+.video-toal-white {
+    background: url("../images/video-icon-white.png") no-repeat scroll 0 2px transparent;
+    color: #fff;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 15px 0 2px;
+    padding-left: 16px;
+    height: 15px;
+}
+
 .music-toal-white {
     background: url("../images/music-icon-white.png") no-repeat scroll 0 0 transparent;
     color: #fff;
     float: left;
     font-size: 11px;
     font-weight: bold;
-    margin: 0 15px 0 3px;
+    margin: 0 15px 0 2px;
     padding-left: 16px;
     height: 15px;
 }
@@ -89,9 +100,7 @@
     font-size: 11px;
     font-weight: bold;
     padding-left: 17px;
-    line-height: 15px;
     height: 15px;
-    margin: -1px;
 }
 
 .unplayed-label, .unplayed-label-box{
@@ -113,11 +122,6 @@
 }
 .podcast-name{
     font-size: 14px;
-    margin-bottom: 5px;
-}
-.episode-title{
-    font-size: 14px;
-    font-weight: bold;
     margin-bottom: 5px;
 }
 .x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal{
