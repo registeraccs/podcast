@@ -6,32 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
-        "data": [
-            "[\r",
-            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms\", name: \"Sunny's Bar\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "\t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/Tz0vtUWDjb_u-XkrRbv5EA/ms\", name: \"Duff's Brooklyn\" , type: \"movie\", date: \"12.02.2013 12:50\"},\r",
-            "  \t{ photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/wv7XY2ENy4HD6ZufRCnXvA/ms\", name: \"Vin Sur Vingt\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Lucky 13 Saloon\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/KGV5uYP6ptUfls13ZlsEfg/ms\", name: \"Sunny's Bar\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , type: \"movie\", date: \"12.02.2013 12:50\"},\r",
-            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/K_23zz6O6SeN1gX8Y5h8hA/ms\", name: \"Sunny's Bar\" , type: \"movie\", date: \"12.02.2013 12:50\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/bJT-SPJrjTIi6K8ehqwnXQ/ms\", name: \"Duff's Brooklyn\" , type: \"movie\", date: \"12.02.2013 12:50\"},\r",
-            "  \t{ photo_url: \"http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms\", name: \"Vin Sur Vingt\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/KtdHatgh-koBoQ9HrpNWLA/ms\", name: \"Lucky 13 Saloon\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/d_osp98Jw_sdLNyOqeitbQ/ms\", name: \"Sunny's Bar\" , type: \"movie\", date: \"12.02.2013 12:50\"},\r",
-            "\t{ photo_url: \"http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms\", name: \"Duff's Brooklyn\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "  \t{ photo_url: \"http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms\", name: \"Vin Sur Vingt\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "    { photo_url: \"http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms\", name: \"Lucky 13 Saloon\" , type: \"music\", date: \"12.02.2013 12:50\"},\r",
-            "]"
-        ],
+        "autoLoad": null,
+        "data": null,
         "storeId": "UnplayedStore",
-        "designer|userClassName": "UnplayedStore",
-        "designer|userAlias": "unplayedstore"
+        "designer|userClassName": "UnplayedStore"
     },
-    "designerId": "2db60447-b3b4-4db9-8e2c-66f126736157",
+    "designerId": "b66ccb1c-a620-4e97-9078-9355e00e4582",
     "cn": [
         {
             "type": "Ext.data.Field",
@@ -41,9 +21,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "photo_url"
+                "name": "episode_id"
             },
-            "designerId": "4c0c5544-fbfa-4ed5-9f7b-61609643df24"
+            "designerId": "9b86aa42-f658-443e-bd27-2ad3a276c65f"
         },
         {
             "type": "Ext.data.Field",
@@ -53,9 +33,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "name"
+                "name": "episode_name"
             },
-            "designerId": "86d86c3b-c921-4921-892b-20c6963374a4"
+            "designerId": "7a464ec2-86ab-4302-a9e8-cbdc9130fbaf"
         },
         {
             "type": "Ext.data.Field",
@@ -65,9 +45,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "type"
+                "name": "episode_thumbnail"
             },
-            "designerId": "1589ed5d-5f02-4cdb-aaf9-3d68685a78d8"
+            "designerId": "50fc15bc-dbdf-4c5c-a172-1580fc47c072"
         },
         {
             "type": "Ext.data.Field",
@@ -77,9 +57,122 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "date"
+                "name": "episode_html"
             },
-            "designerId": "46ba9a5a-c003-4322-8b43-92f63fa84909"
+            "designerId": "1d8b08da-d431-4c77-b79e-8e663ba7abd5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "U",
+                "name": "episode_date",
+                "type": "date"
+            },
+            "designerId": "686c5ebf-2df8-4e60-a5a9-d69de4960341"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_duration"
+            },
+            "designerId": "3a8b69fa-1477-47ca-a6de-870cb906f87b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_type"
+            },
+            "designerId": "17ee2818-a5ea-49e1-ac0f-362669ac2129"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_added"
+            },
+            "designerId": "6901539d-bffc-457f-aef5-abd16cb8bcd5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_description"
+            },
+            "designerId": "0298a069-8c79-4f8e-992a-5b8a84bbcc6f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_played"
+            },
+            "designerId": "81d585c8-7564-4d6d-b82a-636c5be74988"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_time_played"
+            },
+            "designerId": "be1b4d21-4643-4dde-9ecf-a08b8aaf5828"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": null,
+                "url": "unplayed.php"
+            },
+            "designerId": "3ffd4c53-b2da-475d-9172-79c38fa65fdb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "273c5d0c-0608-4526-9c7f-4121777c5692"
+                }
+            ]
         }
     ]
 }

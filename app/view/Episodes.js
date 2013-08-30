@@ -28,7 +28,7 @@ Ext.define('MyApp.view.Episodes', {
                 items: [
                     {
                         xtype: 'label',
-                        html: 'Daft Punk Podcasts',
+                        itemId: 'podcastname',
                         style: 'color: #000;\r\nfont-size: 14px;',
                         ui: ''
                     },
@@ -37,6 +37,7 @@ Ext.define('MyApp.view.Episodes', {
                     },
                     {
                         xtype: 'button',
+                        itemId: 'btnsubscribe',
                         style: 'background: #fff;\r\ncolor: #8fced6;\r\nborder: none;',
                         text: 'Subscribe'
                     }
@@ -73,7 +74,18 @@ Ext.define('MyApp.view.Episodes', {
                 store: 'EpisodesStore',
                 itemHeight: 70
             }
+        ],
+        listeners: [
+            {
+                fn: 'onBtnsubscribeTap',
+                event: 'tap',
+                delegate: '#btnsubscribe'
+            }
         ]
+    },
+
+    onBtnsubscribeTap: function(button, e, eOpts) {
+        alert('send subscribe');
     }
 
 });

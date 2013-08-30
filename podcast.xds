@@ -94,14 +94,6 @@
             ],
             "className": "Unplayed"
         },
-        "2db60447-b3b4-4db9-8e2c-66f126736157": {
-            "paths": [
-                "metadata/store/UnplayedStore",
-                "app/store/override/UnplayedStore.js",
-                "app/store/UnplayedStore.js"
-            ],
-            "className": "UnplayedStore"
-        },
         "3ccb6679-8c2d-472b-b718-088c1b120b25": {
             "paths": [
                 "metadata/view/Episodes",
@@ -157,6 +149,22 @@
                 "app/store/EpisodesStore.js"
             ],
             "className": "EpisodesStore"
+        },
+        "b66ccb1c-a620-4e97-9078-9355e00e4582": {
+            "paths": [
+                "metadata/store/UnplayedStore",
+                "app/store/override/UnplayedStore.js",
+                "app/store/UnplayedStore.js"
+            ],
+            "className": "UnplayedStore"
+        },
+        "ab30c1fe-098b-4ec7-ba6e-feb6e1a99964": {
+            "paths": [
+                "metadata/store/CategoryStore",
+                "app/store/override/CategoryStore.js",
+                "app/store/CategoryStore.js"
+            ],
+            "className": "CategoryStore"
         }
     },
     "viewOrderMap": {
@@ -178,7 +186,8 @@
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",
             "6c8496a8-a5d7-422e-a91e-d53c0db4b032",
-            "2db60447-b3b4-4db9-8e2c-66f126736157"
+            "b66ccb1c-a620-4e97-9078-9355e00e4582",
+            "ab30c1fe-098b-4ec7-ba6e-feb6e1a99964"
         ],
         "controller": [
             "2df07941-2228-41eb-87fe-7243f9c73218"

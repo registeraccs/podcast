@@ -65,7 +65,6 @@ Ext.define('MyApp.view.Library', {
                     '</div>',
                     ''
                 ],
-                store: 'UnplayedStore',
                 itemHeight: 70
             }
         ],

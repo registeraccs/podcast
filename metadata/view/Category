@@ -33,7 +33,7 @@
                     "true"
                 ],
                 "selectedCls": null,
-                "store": "UnplayedStore",
+                "store": "CategoryStore",
                 "itemHeight": 70
             },
             "designerId": "ece4b71e-d84a-4e2b-ac40-6484d482ac3d",
@@ -48,16 +48,7 @@
                     "userConfig": {
                         "implHandler": [
                             "<div class=\"list-info\">\r",
-                            "\t<div class=\"podcast-name\">{name}</div>\r",
-                            "    <tpl if=\"type == 'music'\">\r",
-                            "        <div class=\"music-box\">\r",
-                            "            <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{date}</span>\r",
-                            "        </div>\r",
-                            "    <tpl else>\r",
-                            "        <div class=\"video-box\">\r",
-                            "            <span class=\"video-icon-grey\"></span><span class=\"video-date\">{date}</span>\r",
-                            "        </div>\r",
-                            "    </tpl>\r",
+                            "\t<div class=\"podcast-name\">{category_name}</div>\r",
                             "</div>\r",
                             ""
                         ],

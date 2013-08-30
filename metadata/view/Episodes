@@ -40,7 +40,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Daft Punk Podcasts",
+                        "html": null,
+                        "itemId": "podcastname",
                         "style": [
                             "color: #000;\r",
                             "font-size: 14px;"
@@ -69,6 +70,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "btnsubscribe",
                         "style": [
                             "background: #fff;\r",
                             "color: #8fced6;\r",
@@ -79,7 +81,25 @@
                     "configAlternates": {
                         "style": "object"
                     },
-                    "designerId": "05f8830f-50f9-411e-a9ad-f096848373f9"
+                    "designerId": "05f8830f-50f9-411e-a9ad-f096848373f9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnsubscribeTap",
+                                "implHandler": [
+                                    "alert('send subscribe');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "ae1955ba-8bad-42ee-9898-e28c19c78bbb"
+                        }
+                    ]
                 }
             ]
         },

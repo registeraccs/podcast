@@ -26,7 +26,8 @@ Ext.application({
     stores: [
         'PodcastStore',
         'UnplayedStore',
-        'EpisodesStore'
+        'EpisodesStore',
+        'CategoryStore'
     ],
     views: [
         'Login',

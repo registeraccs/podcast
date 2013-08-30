@@ -31,14 +31,17 @@ Ext.define('MyApp.controller.MyController', {
                 tap: 'onUnplayedbtnleftTap'
             },
             "list#mylist": {
-                itemtap: 'onMyPodCastTap'
+                itemtap: 'onMyPodCastList'
+            },
+            "dataview#mydataview": {
+                itemtap: 'onMyPodcastBox'
             },
             "list#mylist2": {
                 itemtap: 'onEpisodesTap',
                 itemtaphold: 'onMylist2ItemTaphold'
             },
-            "dataview#mydataview": {
-                itemtap: 'onMydataviewItemTap'
+            "list#unplayedlist": {
+                itemtap: 'onUnplayedlistItemTap'
             }
         }
     },
@@ -65,23 +68,55 @@ Ext.define('MyApp.controller.MyController', {
         me.Unplayed();
     },
 
-    onMyPodCastTap: function(dataview, index, target, record, e, eOpts) {
+    onMyPodCastList: function(dataview, index, target, record, e, eOpts) {
         var me = this;
-        //get episodes
-        var store = Ext.StoreMgr.lookup('EpisodesStore');
-        proxy= store.getProxy();
-        proxy.setExtraParam('podcast_id', record.get('podcast_id') );
-        store.load();
+        me.Podcast(record);
+    },
 
-        //load view
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'episodes',
-            title: 'Episodes'
-        });
+    onMyPodcastBox: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        me.Podcast(record);
     },
 
     onEpisodesTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        me.Episode(index,record);
+    },
+
+    onMylist2ItemTaphold: function(dataview, index, target, record, e, eOpts) {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'audio',
+            title: 'Audio'
+        });
+
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'video',
+            title: 'Video'
+        });
+    },
+
+    onUnplayedlistItemTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        me.Episode(index,record);
+    },
+
+    Unplayed: function() {
+        var nav = Ext.ComponentQuery.query('#nav')[0];
+        nav.push({
+            xtype: 'unplayed',
+            title: 'Unplayed'
+        });
+
+        var me = this;
+        //get unplayed
+        var store = Ext.StoreMgr.lookup('UnplayedStore');
+        store.load();
+
+    },
+
+    Episode: function(index, record) {
         if(index != 0){
             var me = this;
             var nav = Ext.ComponentQuery.query('#nav')[0];
@@ -105,35 +140,26 @@ Ext.define('MyApp.controller.MyController', {
 
     },
 
-    onMylist2ItemTaphold: function(dataview, index, target, record, e, eOpts) {
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'audio',
-            title: 'Audio'
-        });
-
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'video',
-            title: 'Video'
-        });
-    },
-
-    onMydataviewItemTap: function(dataview, index, target, record, e, eOpts) {
+    Podcast: function(record) {
         var me = this;
+        //get episodes
+        var store = Ext.StoreMgr.lookup('EpisodesStore');
+        proxy= store.getProxy();
+        proxy.setExtraParam('podcast_id', record.get('podcast_id') );
+        store.load();
+
+        //load view
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.push({
             xtype: 'episodes',
             title: 'Episodes'
         });
-    },
 
-    Unplayed: function() {
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'unplayed',
-            title: 'Unplayed'
-        });
+        var podcastlabel = Ext.ComponentQuery.query('#podcastname')[0];
+        podcastlabel.setHtml(record.get('podcast_name'));
+
+        var btnsub = Ext.ComponentQuery.query('#btnsubscribe')[0];
+        btnsub.setDisabled(record.get('podcast_subscribe'));
     }
 
 });

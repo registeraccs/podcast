@@ -83,7 +83,13 @@
                     "nav.push({\r",
                     "    xtype: 'unplayed',\r",
                     "    title: 'Unplayed'\r",
-                    "});"
+                    "});\r",
+                    "\r",
+                    "var me = this;\r",
+                    "//get unplayed\r",
+                    "var store = Ext.StoreMgr.lookup('UnplayedStore');\r",
+                    "store.load();\r",
+                    ""
                 ]
             },
             "designerId": "55faa837-b2d9-4b23-b8b3-d11c815316c2"
@@ -115,21 +121,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onMyPodCastTap",
+                "fn": "onMyPodCastList",
                 "implHandler": [
                     "var me = this;\r",
-                    "//get episodes\r",
-                    "var store = Ext.StoreMgr.lookup('EpisodesStore');\r",
-                    "proxy= store.getProxy();\r",
-                    "proxy.setExtraParam('podcast_id', record.get('podcast_id') );\r",
-                    "store.load();\r",
-                    "\r",
-                    "//load view\r",
-                    "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
-                    "nav.push({\r",
-                    "    xtype: 'episodes',\r",
-                    "    title: 'Episodes'\r",
-                    "});"
+                    "me.Podcast(record);"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
@@ -145,29 +140,29 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "onMyPodcastBox",
+                "implHandler": [
+                    "var me = this;\r",
+                    "me.Podcast(record);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview#mydataview"
+            },
+            "designerId": "b32c1bea-fd7a-4bc9-8589-3eb954917806"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "fn": "onEpisodesTap",
                 "implHandler": [
-                    "if(index != 0){\r",
-                    "    var me = this;\r",
-                    "    var nav = Ext.ComponentQuery.query('#nav')[0];\r",
-                    "    nav.push({\r",
-                    "        xtype: 'episode',\r",
-                    "        title: 'Episode Info'\r",
-                    "    });\r",
-                    "\r",
-                    "    var episode = Ext.ComponentQuery.query('#episode_info')[0];\r",
-                    "    episode.setData({'episode_type':record.get('episode_type'), 'episode_duration': record.get('episode_duration'), 'episode_date': record.get('episode_date')});\r",
-                    "\r",
-                    "    var episode_title = Ext.ComponentQuery.query('#episode_title')[0];\r",
-                    "    episode_title.setHtml(record.get('episode_name'));\r",
-                    "    \r",
-                    "    var episode_des = Ext.ComponentQuery.query('#episode_des')[0];\r",
-                    "    episode_des.setHtml(record.get('episode_description'));\r",
-                    "    \r",
-                    "    var btnmark = Ext.ComponentQuery.query('#btnmark')[0];\r",
-                    "\tbtnmark.setDisabled(record.get('episode_played'));\r",
-                    "}\r",
-                    ""
+                    "var me = this;\r",
+                    "me.Episode(index,record);"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
@@ -211,20 +206,91 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onMydataviewItemTap",
+                "fn": "onUnplayedlistItemTap",
                 "implHandler": [
                     "var me = this;\r",
+                    "me.Episode(index,record);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list#unplayedlist"
+            },
+            "designerId": "e44f9c6a-bf7d-415b-82ec-4ca321d57961"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "Episode",
+                "designer|params": [
+                    "index",
+                    "record"
+                ],
+                "implHandler": [
+                    "if(index != 0){\r",
+                    "    var me = this;\r",
+                    "    var nav = Ext.ComponentQuery.query('#nav')[0];\r",
+                    "    nav.push({\r",
+                    "        xtype: 'episode',\r",
+                    "        title: 'Episode Info'\r",
+                    "    });\r",
+                    "\r",
+                    "    var episode = Ext.ComponentQuery.query('#episode_info')[0];\r",
+                    "    episode.setData({'episode_type':record.get('episode_type'), 'episode_duration': record.get('episode_duration'), 'episode_date': record.get('episode_date')});\r",
+                    "\r",
+                    "    var episode_title = Ext.ComponentQuery.query('#episode_title')[0];\r",
+                    "    episode_title.setHtml(record.get('episode_name'));\r",
+                    "\r",
+                    "    var episode_des = Ext.ComponentQuery.query('#episode_des')[0];\r",
+                    "    episode_des.setHtml(record.get('episode_description'));\r",
+                    "\r",
+                    "    var btnmark = Ext.ComponentQuery.query('#btnmark')[0];\r",
+                    "    btnmark.setDisabled(record.get('episode_played'));\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "c7ea333e-67bc-4f62-a6f0-72f9fd44e9d9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "Podcast",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "//get episodes\r",
+                    "var store = Ext.StoreMgr.lookup('EpisodesStore');\r",
+                    "proxy= store.getProxy();\r",
+                    "proxy.setExtraParam('podcast_id', record.get('podcast_id') );\r",
+                    "store.load();\r",
+                    "\r",
+                    "//load view\r",
                     "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
                     "nav.push({\r",
                     "    xtype: 'episodes',\r",
                     "    title: 'Episodes'\r",
-                    "});"
-                ],
-                "name": "itemtap",
-                "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "dataview#mydataview"
+                    "});\r",
+                    "\r",
+                    "var podcastlabel = Ext.ComponentQuery.query('#podcastname')[0];\r",
+                    "podcastlabel.setHtml(record.get('podcast_name'));\r",
+                    "\r",
+                    "var btnsub = Ext.ComponentQuery.query('#btnsubscribe')[0];\r",
+                    "btnsub.setDisabled(record.get('podcast_subscribe'));"
+                ]
             },
-            "designerId": "b32c1bea-fd7a-4bc9-8589-3eb954917806"
+            "designerId": "f1014c87-4e5c-49df-b878-b1028cf3934c"
         }
     ]
 }

@@ -109,7 +109,7 @@
                     "vertical"
                 ],
                 "selectedCls": null,
-                "store": "UnplayedStore",
+                "store": null,
                 "itemHeight": 70
             },
             "designerId": "d4b680b0-feb8-4262-8048-8b73d4c361d2",

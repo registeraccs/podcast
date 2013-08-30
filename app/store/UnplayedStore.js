@@ -15,123 +15,53 @@
 
 Ext.define('MyApp.store.UnplayedStore', {
     extend: 'Ext.data.Store',
-    alias: 'store.unplayedstore',
 
     config: {
-        autoLoad: true,
-        data: [
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/LPp9JaaGjXYIhIxIIoBI0A/ms',
-                name: 'Sunny\'s Bar',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/Tz0vtUWDjb_u-XkrRbv5EA/ms',
-                name: 'Duff\'s Brooklyn',
-                type: 'movie',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/wv7XY2ENy4HD6ZufRCnXvA/ms',
-                name: 'Vin Sur Vingt',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms',
-                name: 'Lucky 13 Saloon',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/KGV5uYP6ptUfls13ZlsEfg/ms',
-                name: 'Sunny\'s Bar',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms',
-                name: 'Duff\'s Brooklyn',
-                type: 'movie',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms',
-                name: 'Vin Sur Vingt',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms',
-                name: 'Lucky 13 Saloon',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/K_23zz6O6SeN1gX8Y5h8hA/ms',
-                name: 'Sunny\'s Bar',
-                type: 'movie',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/bJT-SPJrjTIi6K8ehqwnXQ/ms',
-                name: 'Duff\'s Brooklyn',
-                type: 'movie',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media3.ak.yelpcdn.com/bpthumb/JAifIRY9JIV_Z5IrrD102Q/ms',
-                name: 'Vin Sur Vingt',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/KtdHatgh-koBoQ9HrpNWLA/ms',
-                name: 'Lucky 13 Saloon',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/d_osp98Jw_sdLNyOqeitbQ/ms',
-                name: 'Sunny\'s Bar',
-                type: 'movie',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media1.ak.yelpcdn.com/bpthumb/rJjRHfqg2n9cd2Uq3oRftQ/ms',
-                name: 'Duff\'s Brooklyn',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media2.ak.yelpcdn.com/bpthumb/hBZ6N-xVIR6kWM1JKBR-iw/ms',
-                name: 'Vin Sur Vingt',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            {
-                photo_url: 'http://media4.ak.yelpcdn.com/bpthumb/BxjbE1g3snRu6d0dHD_V6Q/ms',
-                name: 'Lucky 13 Saloon',
-                type: 'music',
-                date: '12.02.2013 12:50'
-            },
-            
-        ],
         storeId: 'UnplayedStore',
         fields: [
             {
-                name: 'photo_url'
+                name: 'episode_id'
             },
             {
-                name: 'name'
+                name: 'episode_name'
             },
             {
-                name: 'type'
+                name: 'episode_thumbnail'
             },
             {
-                name: 'date'
+                name: 'episode_html'
+            },
+            {
+                dateFormat: 'U',
+                name: 'episode_date',
+                type: 'date'
+            },
+            {
+                name: 'episode_duration'
+            },
+            {
+                name: 'episode_type'
+            },
+            {
+                name: 'episode_added'
+            },
+            {
+                name: 'episode_description'
+            },
+            {
+                name: 'episode_played'
+            },
+            {
+                name: 'episode_time_played'
             }
-        ]
+        ],
+        proxy: {
+            type: 'ajax',
+            url: 'unplayed.php',
+            reader: {
+                type: 'json',
+                rootProperty: 'rows'
+            }
+        }
     }
 });

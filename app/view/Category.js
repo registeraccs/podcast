@@ -28,20 +28,11 @@ Ext.define('MyApp.view.Category', {
                 scrollable: true,
                 itemTpl: [
                     '<div class="list-info">',
-                    '	<div class="podcast-name">{name}</div>',
-                    '    <tpl if="type == \'music\'">',
-                    '        <div class="music-box">',
-                    '            <span class="music-icon-unplayed"></span><span class="music-date">{date}</span>',
-                    '        </div>',
-                    '    <tpl else>',
-                    '        <div class="video-box">',
-                    '            <span class="video-icon-grey"></span><span class="video-date">{date}</span>',
-                    '        </div>',
-                    '    </tpl>',
+                    '	<div class="podcast-name">{category_name}</div>',
                     '</div>',
                     ''
                 ],
-                store: 'UnplayedStore',
+                store: 'CategoryStore',
                 itemHeight: 70
             }
         ],
