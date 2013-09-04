@@ -165,6 +165,22 @@
                 "app/store/CategoryStore.js"
             ],
             "className": "CategoryStore"
+        },
+        "9b485b85-aa46-4799-aa8e-19874d6b46b5": {
+            "paths": [
+                "metadata/store/LibraryStore",
+                "app/store/override/LibraryStore.js",
+                "app/store/LibraryStore.js"
+            ],
+            "className": "LibraryStore"
+        },
+        "d9d5588d-f9c7-4dd5-a066-160e70ae699c": {
+            "paths": [
+                "metadata/store/SearchStore",
+                "app/store/override/SearchStore.js",
+                "app/store/SearchStore.js"
+            ],
+            "className": "SearchStore"
         }
     },
     "viewOrderMap": {
@@ -185,7 +201,9 @@
         ],
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",
+            "9b485b85-aa46-4799-aa8e-19874d6b46b5",
             "6c8496a8-a5d7-422e-a91e-d53c0db4b032",
+            "d9d5588d-f9c7-4dd5-a066-160e70ae699c",
             "b66ccb1c-a620-4e97-9078-9355e00e4582",
             "ab30c1fe-098b-4ec7-ba6e-feb6e1a99964"
         ],

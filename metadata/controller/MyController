@@ -209,7 +209,7 @@
                 "fn": "onUnplayedlistItemTap",
                 "implHandler": [
                     "var me = this;\r",
-                    "me.Episode(index,record);"
+                    "me.Episode(1,record);// always tab with record = 0"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
@@ -291,6 +291,25 @@
                 ]
             },
             "designerId": "f1014c87-4e5c-49df-b878-b1028cf3934c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPodcastlibraryItemTap",
+                "implHandler": [
+                    "var me = this;\r",
+                    "me.Podcast(record);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list#podcastlibrary"
+            },
+            "designerId": "a0761156-b1b9-464b-a906-c610924430a2"
         }
     ]
 }

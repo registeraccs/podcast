@@ -37,12 +37,95 @@
                     "userConfig": {
                         "layout|flex": 1,
                         "docked": null,
+                        "itemId": "mysearchfield2",
                         "style": null,
                         "width": null,
                         "label": "",
                         "name": ""
                     },
-                    "designerId": "89bfe8bd-f20f-4487-9c8a-685376fec461"
+                    "designerId": "89bfe8bd-f20f-4487-9c8a-685376fec461",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMysearchfield2Action",
+                                "implHandler": [
+                                    "var store = Ext.StoreMgr.lookup('SearchStore');\r",
+                                    "proxy= store.getProxy();\r",
+                                    "proxy.setExtraParam('searchstr', textfield );\r",
+                                    "store.load();\r",
+                                    ""
+                                ],
+                                "name": "action"
+                            },
+                            "designerId": "38464db4-6668-4d78-8cd3-d46a70919e7d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "docked": "top",
+                "height": "100%",
+                "itemId": "mylist3",
+                "style": "font-size: 12px",
+                "ui": null,
+                "designer|displayName": "Plist",
+                "scrollable": [
+                    "true"
+                ],
+                "emptyText": "No results",
+                "selectedCls": null,
+                "store": "SearchStore",
+                "itemHeight": 70
+            },
+            "designerId": "84b7cd7b-8eca-4648-a3be-602730b75f83",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<tpl if=\"episode_html != ''\">\r",
+                            "    <div style=\"min-height: 125px;\">{episode_html}</div>\r",
+                            "<tpl else>\r",
+                            "\t<img class=\"photo shadow\" src=\"{episode_thumbnail}\" width=\"60\" height=\"60\"/>\r",
+                            "    <div class=\"list-info\">\r",
+                            "        <div class=\"podcast-name\">{episode_name}</div>\r",
+                            "        <tpl if=\"episode_type == 0\">\r",
+                            "            <div class=\"music-box\">\r",
+                            "                <span class=\"music-icon-unplayed\"></span><span class=\"music-date\">{episode_date:date(\"m.d.Y\")}</span>\r",
+                            "            </div>\r",
+                            "        <tpl else>\r",
+                            "            <div class=\"video-box\">\r",
+                            "                <span class=\"video-icon-grey\"></span><span class=\"video-date\">{episode_date:date(\"m.d.Y\")}</span>\r",
+                            "            </div>\r",
+                            "        </tpl>\r",
+                            "    </div>\r",
+                            "</tpl>\r",
+                            "    \r",
+                            ""
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "c98b2205-a421-4406-bb4c-ab8bb85077a4"
                 }
             ]
         }

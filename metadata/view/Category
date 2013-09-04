@@ -25,7 +25,7 @@
                 "border": null,
                 "docked": null,
                 "height": null,
-                "itemId": "mylist4",
+                "itemId": "categorylist",
                 "style": null,
                 "ui": null,
                 "designer|displayName": "Plist",
@@ -66,6 +66,14 @@
                     "userConfig": {
                         "fn": "onMylist4ItemTap",
                         "implHandler": [
+                            "var me = this;\r",
+                            "//get Podcast\r",
+                            "var store = Ext.StoreMgr.lookup('LibraryStore');\r",
+                            "proxy= store.getProxy();\r",
+                            "proxy.setExtraParam('category_id', record.get('category_id') );\r",
+                            "store.load();\r",
+                            "\r",
+                            "//load view\r",
                             "var me = this;\r",
                             "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
                             "nav.push({\r",

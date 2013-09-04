@@ -42,6 +42,9 @@ Ext.define('MyApp.controller.MyController', {
             },
             "list#unplayedlist": {
                 itemtap: 'onUnplayedlistItemTap'
+            },
+            "list#podcastlibrary": {
+                itemtap: 'onPodcastlibraryItemTap'
             }
         }
     },
@@ -99,7 +102,12 @@ Ext.define('MyApp.controller.MyController', {
 
     onUnplayedlistItemTap: function(dataview, index, target, record, e, eOpts) {
         var me = this;
-        me.Episode(index,record);
+        me.Episode(1,record);// always tab with record = 0
+    },
+
+    onPodcastlibraryItemTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        me.Podcast(record);
     },
 
     Unplayed: function() {

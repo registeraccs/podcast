@@ -1,0 +1,178 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": null,
+        "storeId": "SearchStore",
+        "designer|userClassName": "SearchStore"
+    },
+    "designerId": "d9d5588d-f9c7-4dd5-a066-160e70ae699c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_id"
+            },
+            "designerId": "f38488e4-543f-4eb0-8d50-c5eda1cd9f4f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_name"
+            },
+            "designerId": "57e74de4-1138-47e1-b77f-2b69f7e78b2f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_thumbnail"
+            },
+            "designerId": "c88c600b-ecc1-4a86-a49d-8d69bad36e96"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_html"
+            },
+            "designerId": "8398b53d-7dcc-40e7-9d70-2e082c53e67d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "U",
+                "name": "episode_date",
+                "type": "date"
+            },
+            "designerId": "a8d686e8-1e39-4a88-b0a8-28bb4afff695"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_duration"
+            },
+            "designerId": "3e5945cf-bec4-49c2-b09b-ea17c2dbe84e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_type"
+            },
+            "designerId": "8697d063-0ec7-47fe-aba8-acf6cc32bafa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_added"
+            },
+            "designerId": "c398472e-289d-45f5-9e64-92dd979e5c22"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_description"
+            },
+            "designerId": "ff2438ad-3965-4363-a0f9-e9bf4ceffc95"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_played"
+            },
+            "designerId": "c2adefa2-7d6c-4764-a3bb-ba810a6ea504"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episode_time_played"
+            },
+            "designerId": "c2baf014-c589-41f4-9438-29c2c83ebced"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": null,
+                "url": "searchlibrary.php"
+            },
+            "designerId": "634c256c-f6fb-4edc-982f-c3157d3be98b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "f9df1466-d2cb-484d-92d5-cb8b2706284b"
+                }
+            ]
+        }
+    ]
+}

@@ -79,6 +79,9 @@ Ext.define('MyApp.view.MyTab', {
     onContainerActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.getNavigationBar().setTitle('Library');
+
+        var store = Ext.StoreMgr.lookup('CategoryStore');
+        store.load();
     },
 
     onContainerDeactivate: function(oldActiveItem, container, newActiveItem, eOpts) {

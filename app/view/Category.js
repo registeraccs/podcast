@@ -24,7 +24,7 @@ Ext.define('MyApp.view.Category', {
         items: [
             {
                 xtype: 'list',
-                itemId: 'mylist4',
+                itemId: 'categorylist',
                 scrollable: true,
                 itemTpl: [
                     '<div class="list-info">',
@@ -40,12 +40,20 @@ Ext.define('MyApp.view.Category', {
             {
                 fn: 'onMylist4ItemTap',
                 event: 'itemtap',
-                delegate: '#mylist4'
+                delegate: '#categorylist'
             }
         ]
     },
 
     onMylist4ItemTap: function(dataview, index, target, record, e, eOpts) {
+        var me = this;
+        //get Podcast
+        var store = Ext.StoreMgr.lookup('LibraryStore');
+        proxy= store.getProxy();
+        proxy.setExtraParam('category_id', record.get('category_id') );
+        store.load();
+
+        //load view
         var me = this;
         var nav = Ext.ComponentQuery.query('#nav')[0];
         nav.push({

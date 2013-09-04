@@ -1,0 +1,139 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": null,
+        "storeId": "LibraryStore",
+        "designer|userClassName": "LibraryStore"
+    },
+    "designerId": "9b485b85-aa46-4799-aa8e-19874d6b46b5",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_id"
+            },
+            "designerId": "0dfc7f72-2e1e-47ba-a545-291e2f561fa2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_name"
+            },
+            "designerId": "bb0953b1-10d7-4df8-ad67-e7fca993adb9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_thumbnail"
+            },
+            "designerId": "a7da2811-ebb6-4ce4-b3a1-07a19e60ff6a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_type"
+            },
+            "designerId": "2185958a-79aa-4808-b7d7-625ac81fd03a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_description"
+            },
+            "designerId": "3e3546d9-b8a8-4d94-9c76-8af47b4f8c93"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_category"
+            },
+            "designerId": "a6567f42-422f-4925-a5c8-4ca28e5a0b92"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podcast_subscribe"
+            },
+            "designerId": "c15ccbeb-1a41-43fd-a69c-d7639a872a6e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "episodes"
+            },
+            "designerId": "3266375d-b00a-45d7-9030-b334a95a24c7"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "library.php"
+            },
+            "designerId": "9269b258-0dea-439a-8e23-602ec42e218a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "99c6625d-59a1-44ef-ad01-ff093dcb887f"
+                }
+            ]
+        }
+    ]
+}

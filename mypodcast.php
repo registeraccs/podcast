@@ -8,7 +8,7 @@ $rows[] = array(
         "podcast_category"=>"Classical Music",
         "podcast_subscribe"=>0,
         "episodes" => array(
-        		"total"=> 10,	
+        		"total"=> 8,	
                 "unwatched"=>4	
         	)
 	);
@@ -22,7 +22,7 @@ $rows[] = array(
         "podcast_category"=>"Classical Music",
         "podcast_subscribe"=>1,
         "episodes" => array(
-        		"total"=> 10,	
+        		"total"=> 14,	
                 "unwatched"=>6	
         	)
 	);
@@ -36,7 +36,7 @@ $rows[] = array(
         "podcast_category"=>"Classical Music",
         "podcast_subscribe"=>1,
         "episodes" => array(
-        		"total"=> 10,	
+        		"total"=> 9,	
                 "unwatched"=>3	
         	)
 	);

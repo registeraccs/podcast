@@ -70,7 +70,10 @@
                         "fn": "onContainerActivate",
                         "implHandler": [
                             "var nav = Ext.ComponentQuery.query('#nav')[0];\r",
-                            "nav.getNavigationBar().setTitle('Library');"
+                            "nav.getNavigationBar().setTitle('Library');\r",
+                            "\r",
+                            "var store = Ext.StoreMgr.lookup('CategoryStore');\r",
+                            "store.load();"
                         ],
                         "name": "activate"
                     },

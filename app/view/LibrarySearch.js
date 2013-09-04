@@ -35,12 +35,60 @@ Ext.define('MyApp.view.LibrarySearch', {
                     {
                         xtype: 'searchfield',
                         flex: 1,
+                        itemId: 'mysearchfield2',
                         label: '',
                         name: ''
                     }
                 ]
+            },
+            {
+                xtype: 'list',
+                docked: 'top',
+                height: '100%',
+                itemId: 'mylist3',
+                style: 'font-size: 12px',
+                scrollable: true,
+                emptyText: 'No results',
+                itemTpl: [
+                    '<tpl if="episode_html != \'\'">',
+                    '    <div style="min-height: 125px;">{episode_html}</div>',
+                    '<tpl else>',
+                    '	<img class="photo shadow" src="{episode_thumbnail}" width="60" height="60"/>',
+                    '    <div class="list-info">',
+                    '        <div class="podcast-name">{episode_name}</div>',
+                    '        <tpl if="episode_type == 0">',
+                    '            <div class="music-box">',
+                    '                <span class="music-icon-unplayed"></span><span class="music-date">{episode_date:date("m.d.Y")}</span>',
+                    '            </div>',
+                    '        <tpl else>',
+                    '            <div class="video-box">',
+                    '                <span class="video-icon-grey"></span><span class="video-date">{episode_date:date("m.d.Y")}</span>',
+                    '            </div>',
+                    '        </tpl>',
+                    '    </div>',
+                    '</tpl>',
+                    '    ',
+                    ''
+                ],
+                store: 'SearchStore',
+                itemHeight: 70
+            }
+        ],
+        listeners: [
+            {
+                fn: 'onMysearchfield2Action',
+                event: 'action',
+                delegate: '#mysearchfield2'
             }
         ]
+    },
+
+    onMysearchfield2Action: function(textfield, e, eOpts) {
+        var store = Ext.StoreMgr.lookup('SearchStore');
+        proxy= store.getProxy();
+        proxy.setExtraParam('searchstr', textfield );
+        store.load();
+
     }
 
 });
