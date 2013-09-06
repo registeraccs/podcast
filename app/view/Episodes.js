@@ -80,12 +80,21 @@ Ext.define('MyApp.view.Episodes', {
                 fn: 'onBtnsubscribeTap',
                 event: 'tap',
                 delegate: '#btnsubscribe'
+            },
+            {
+                fn: 'onMylist2ItemSwipe',
+                event: 'itemswipe',
+                delegate: '#mylist2'
             }
         ]
     },
 
     onBtnsubscribeTap: function(button, e, eOpts) {
         alert('send subscribe');
+    },
+
+    onMylist2ItemSwipe: function(dataview, index, target, record, e, eOpts) {
+        console.log('test')
     }
 
 });

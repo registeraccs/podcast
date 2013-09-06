@@ -57,13 +57,116 @@
                                 "implHandler": [
                                     "var store = Ext.StoreMgr.lookup('SearchStore');\r",
                                     "proxy= store.getProxy();\r",
-                                    "proxy.setExtraParam('searchstr', textfield );\r",
+                                    "proxy.setExtraParam('searchstr',textfield);\r",
                                     "store.load();\r",
+                                    "if(store.getCount() > 0){\r",
+                                    "    var podcastlabel = Ext.ComponentQuery.query('#podcastname_search')[0];\r",
+                                    "    podcastlabel.setHtml(\"Load from Url\");\r",
+                                    "\r",
+                                    "    //Show toolbar after search\r",
+                                    "    var librarybar = Ext.ComponentQuery.query('#librarybar')[0];\r",
+                                    "    librarybar.show();    \r",
+                                    "} else {\r",
+                                    "\tvar librarybar = Ext.ComponentQuery.query('#librarybar')[0];\r",
+                                    "\tlibrarybar.hide();\r",
+                                    "}\r",
                                     ""
                                 ],
                                 "name": "action"
                             },
                             "designerId": "38464db4-6668-4d78-8cd3-d46a70919e7d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "hidden": true,
+                "itemId": "librarybar",
+                "style": [
+                    "border: none;\r",
+                    "background: #8fced6;"
+                ]
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "cde6346d-d1fb-4f3d-b2ad-66a666b524ac",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": null,
+                        "itemId": "podcastname_search",
+                        "style": [
+                            "color: #000;\r",
+                            "font-size: 14px;"
+                        ],
+                        "ui": ""
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "f194917b-1f3d-42a8-957c-246d6ff0c02f"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "27912ba7-e155-4b44-b106-9b903a21350f"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "btnsubscribe_search",
+                        "style": [
+                            "background: #fff;\r",
+                            "color: #8fced6;\r",
+                            "border: none;"
+                        ],
+                        "text": "Subscribe"
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "f7689acf-7e9e-4ec4-a8a6-f83ee579e3cd",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnsubscribeTap1",
+                                "implHandler": [
+                                    "alert('send subscribe');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "81ea3de5-b31a-4236-bea0-1a0196042cf4"
                         }
                     ]
                 }

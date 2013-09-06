@@ -159,6 +159,22 @@
                         "designer|displayName": "itemTpl"
                     },
                     "designerId": "1ad2b4cc-cca6-49f3-973a-a880b2f55179"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMylist2ItemSwipe",
+                        "implHandler": [
+                            "console.log('test')"
+                        ],
+                        "name": "itemswipe"
+                    },
+                    "designerId": "c7c63098-2c9c-4a55-ba5a-1a9a723609da"
                 }
             ]
         }

@@ -42,6 +42,30 @@ Ext.define('MyApp.view.LibrarySearch', {
                 ]
             },
             {
+                xtype: 'toolbar',
+                docked: 'top',
+                hidden: true,
+                itemId: 'librarybar',
+                style: 'border: none;\r\nbackground: #8fced6;',
+                items: [
+                    {
+                        xtype: 'label',
+                        itemId: 'podcastname_search',
+                        style: 'color: #000;\r\nfont-size: 14px;',
+                        ui: ''
+                    },
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'btnsubscribe_search',
+                        style: 'background: #fff;\r\ncolor: #8fced6;\r\nborder: none;',
+                        text: 'Subscribe'
+                    }
+                ]
+            },
+            {
                 xtype: 'list',
                 docked: 'top',
                 height: '100%',
@@ -79,6 +103,11 @@ Ext.define('MyApp.view.LibrarySearch', {
                 fn: 'onMysearchfield2Action',
                 event: 'action',
                 delegate: '#mysearchfield2'
+            },
+            {
+                fn: 'onBtnsubscribeTap1',
+                event: 'tap',
+                delegate: '#btnsubscribe_search'
             }
         ]
     },
@@ -86,9 +115,24 @@ Ext.define('MyApp.view.LibrarySearch', {
     onMysearchfield2Action: function(textfield, e, eOpts) {
         var store = Ext.StoreMgr.lookup('SearchStore');
         proxy= store.getProxy();
-        proxy.setExtraParam('searchstr', textfield );
+        proxy.setExtraParam('searchstr',textfield);
         store.load();
+        if(store.getCount() > 0){
+            var podcastlabel = Ext.ComponentQuery.query('#podcastname_search')[0];
+            podcastlabel.setHtml("Load from Url");
 
+            //Show toolbar after search
+            var librarybar = Ext.ComponentQuery.query('#librarybar')[0];
+            librarybar.show();    
+        } else {
+            var librarybar = Ext.ComponentQuery.query('#librarybar')[0];
+            librarybar.hide();
+        }
+
+    },
+
+    onBtnsubscribeTap1: function(button, e, eOpts) {
+        alert('send subscribe');
     }
 
 });
