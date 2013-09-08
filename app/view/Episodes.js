@@ -66,7 +66,7 @@ Ext.define('MyApp.view.Episodes', {
                     '                <span class="video-icon-grey"></span><span class="video-date">{episode_date:date("m.d.Y")}</span>',
                     '            </div>',
                     '        </tpl>',
-                    '        <div class="player">Play</div>',
+                    '        <div class="player"></div>',
                     '    </div>',
                     '</tpl>',
                     '    ',
@@ -81,21 +81,12 @@ Ext.define('MyApp.view.Episodes', {
                 fn: 'onBtnsubscribeTap',
                 event: 'tap',
                 delegate: '#btnsubscribe'
-            },
-            {
-                fn: 'onMylist2ItemSwipe',
-                event: 'itemswipe',
-                delegate: '#mylist2'
             }
         ]
     },
 
     onBtnsubscribeTap: function(button, e, eOpts) {
         alert('send subscribe');
-    },
-
-    onMylist2ItemSwipe: function(dataview, index, target, record, e, eOpts) {
-        console.log('test')
     }
 
 });

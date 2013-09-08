@@ -165,7 +165,6 @@
     font-size: 11px;
     line-height: 15px;
     font-weight: bold;
-    float: left;
 }
 .video-icon-grey{
     background: transparent url('../images/video-icon-grey.png') no-repeat;
@@ -179,17 +178,20 @@
     font-size: 11px;
     line-height: 15px;
     font-weight: bold;
-    float: left;
 }
 .x-button-back.x-button.x-button-pressing, .x-button.x-button-pressing:after, .x-button.x-button-pressed, .x-button.x-button-pressed:after{
     background: #8FCED6;
 }
 .x-scroll-bar-y.active {
-  width: 0px; /*CHANGE: replace width: 6px;*/
+  width: 0px;
 }
 .player{
     background: transparent url('../images/play.png') no-repeat;
     width: 20px;
     height: 20px;
-    float: left;      
+    float: left;
+    margin: 3px 0px 0px -2px;    
+}
+.list-info{
+    margin-top: -12px;
 }

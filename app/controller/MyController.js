@@ -84,7 +84,7 @@ Ext.define('MyApp.controller.MyController', {
         var me = this;
         window.nhanle=e
 
-        if(e.target == e.getTarget('span.player')){
+        if(e.target == e.getTarget('div.player')){
             if(record.get('episode_type') == 0){
                 /*
                 var audioBase = {
