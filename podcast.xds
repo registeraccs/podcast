@@ -110,22 +110,6 @@
             ],
             "className": "Episode"
         },
-        "af31130b-af5f-49b4-9781-2d95505d3b0d": {
-            "paths": [
-                "metadata/view/Audio",
-                "app/view/override/Audio.js",
-                "app/view/Audio.js"
-            ],
-            "className": "Audio"
-        },
-        "7b3854e7-3385-4ed1-8155-a2e502368646": {
-            "paths": [
-                "metadata/view/Video",
-                "app/view/override/Video.js",
-                "app/view/Video.js"
-            ],
-            "className": "Video"
-        },
         "e4c1a7df-a085-4495-a99d-7cda7983bcac": {
             "paths": [
                 "metadata/view/Category",
@@ -181,6 +165,22 @@
                 "app/store/SearchStore.js"
             ],
             "className": "SearchStore"
+        },
+        "b720b9a2-d1ae-47ec-b789-a77bad09c97e": {
+            "paths": [
+                "metadata/view/AudioContain",
+                "app/view/override/AudioContain.js",
+                "app/view/AudioContain.js"
+            ],
+            "className": "AudioContain"
+        },
+        "cf7b2848-dae4-4d86-97d7-9b29afbce4ac": {
+            "paths": [
+                "metadata/view/VideoContain",
+                "app/view/override/VideoContain.js",
+                "app/view/VideoContain.js"
+            ],
+            "className": "VideoContain"
         }
     },
     "viewOrderMap": {
@@ -196,8 +196,8 @@
             "e8aa058b-3164-442a-b710-ee0c56fc93c2",
             "3ccb6679-8c2d-472b-b718-088c1b120b25",
             "ce0f6ca5-d437-4eb3-ab6e-8135837e1776",
-            "af31130b-af5f-49b4-9781-2d95505d3b0d",
-            "7b3854e7-3385-4ed1-8155-a2e502368646"
+            "b720b9a2-d1ae-47ec-b789-a77bad09c97e",
+            "cf7b2848-dae4-4d86-97d7-9b29afbce4ac"
         ],
         "store": [
             "046a2eff-8f2e-4065-9160-89a38a578f9f",

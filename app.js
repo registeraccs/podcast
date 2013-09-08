@@ -41,9 +41,10 @@ Ext.application({
         'Unplayed',
         'Episodes',
         'Episode',
-        'Video',
         'Category',
-        'LibrarySearch'
+        'LibrarySearch',
+        'AudioContain',
+        'VideoContain'
     ],
     controllers: [
         'MyController'

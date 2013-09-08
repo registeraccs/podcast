@@ -1,0 +1,34 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AudioContain",
+        "designer|userAlias": "audiocontain"
+    },
+    "designerId": "b720b9a2-d1ae-47ec-b789-a77bad09c97e",
+    "cn": [
+        {
+            "type": "Ext.Audio",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "myAudio"
+                ],
+                "autoResume": true,
+                "enableControls": true,
+                "loop": true,
+                "muted": null,
+                "url": "crash.mp3"
+            },
+            "designerId": "e52397fb-a0da-4566-a5f9-c0bb66a00ff3"
+        }
+    ]
+}

@@ -187,3 +187,9 @@
 .x-scroll-bar-y.active {
   width: 0px; /*CHANGE: replace width: 6px;*/
 }
+.player{
+    background: transparent url('../images/play.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;      
+}

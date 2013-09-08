@@ -37,8 +37,7 @@ Ext.define('MyApp.controller.MyController', {
                 itemtap: 'onMyPodcastBox'
             },
             "list#mylist2": {
-                itemtap: 'onEpisodesTap',
-                itemtaphold: 'onMylist2ItemTaphold'
+                itemtap: 'onEpisodesTap'
             },
             "list#unplayedlist": {
                 itemtap: 'onUnplayedlistItemTap'
@@ -83,21 +82,50 @@ Ext.define('MyApp.controller.MyController', {
 
     onEpisodesTap: function(dataview, index, target, record, e, eOpts) {
         var me = this;
+        window.nhanle=e
+
+        if(e.target == e.getTarget('span.player')){
+            if(record.get('episode_type') == 0){
+                /*
+                var audioBase = {
+                xtype: 'audio',
+                url  : 'crash.mp3',
+                loop : true
+                };
+
+                var styledAudio = Ext.create('Ext.Audio', Ext.apply({}, audioBase, {
+                title: 'Styled',
+                cls: 'myAudio',
+                layout: 'fit',
+                enableControls: true
+                }));
+                if (styledAudio.isPlaying()) {
+                styledAudio.pause();
+                //this.setText('Play audio');
+            } else {
+                styledAudio.play();
+                //this.setText('Pause audio');
+            }
+            */
+            var nav = Ext.ComponentQuery.query('#nav')[0];
+            nav.push({
+                xtype: 'audiocontain',
+                title: 'Audio'
+            });
+
+
+        } else {
+            var nav = Ext.ComponentQuery.query('#nav')[0];
+            nav.push({
+                xtype: 'videocontain',
+                title: 'Video'
+            });
+        }
+    } else {
         me.Episode(index,record);
-    },
+    }
 
-    onMylist2ItemTaphold: function(dataview, index, target, record, e, eOpts) {
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'audio',
-            title: 'Audio'
-        });
 
-        var nav = Ext.ComponentQuery.query('#nav')[0];
-        nav.push({
-            xtype: 'video',
-            title: 'Video'
-        });
     },
 
     onUnplayedlistItemTap: function(dataview, index, target, record, e, eOpts) {

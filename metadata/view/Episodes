@@ -151,7 +151,9 @@
                             "                <span class=\"video-icon-grey\"></span><span class=\"video-date\">{episode_date:date(\"m.d.Y\")}</span>\r",
                             "            </div>\r",
                             "        </tpl>\r",
+                            "        <div class=\"player\">Play</div>\r",
                             "    </div>\r",
+                            "    \r",
                             "</tpl>\r",
                             "    \r",
                             ""

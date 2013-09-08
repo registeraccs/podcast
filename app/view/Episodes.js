@@ -66,6 +66,7 @@ Ext.define('MyApp.view.Episodes', {
                     '                <span class="video-icon-grey"></span><span class="video-date">{episode_date:date("m.d.Y")}</span>',
                     '            </div>',
                     '        </tpl>',
+                    '        <div class="player">Play</div>',
                     '    </div>',
                     '</tpl>',
                     '    ',

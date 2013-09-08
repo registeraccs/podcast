@@ -7,7 +7,6 @@
         "resource": false,
         "672d8408-6860-4256-b613-9740f2efcbfb": {
             "id": "672d8408-6860-4256-b613-9740f2efcbfb",
-            "expanded": false,
             "cn": [
                 {
                     "id": "53d79e3c-a7f3-474a-bd15-f6e24f4dd557",
@@ -37,6 +36,7 @@
         },
         "de86ac27-3d9e-4aee-a3e0-773694009a17": {
             "id": "de86ac27-3d9e-4aee-a3e0-773694009a17",
+            "expanded": false,
             "cn": [
                 {
                     "id": "e64c5225-388b-4c0f-bab2-305842234c71",
@@ -88,6 +88,7 @@
         },
         "17a25189-f914-460b-a9a8-92762b013e49": {
             "id": "17a25189-f914-460b-a9a8-92762b013e49",
+            "expanded": false,
             "cn": [
                 {
                     "id": "02e7d012-c11c-4766-b2aa-c2ee3eb0c273",
@@ -203,6 +204,7 @@
         },
         "0ec2f1ad-921e-40de-b7bf-cefda33ba549": {
             "id": "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
+            "expanded": false,
             "cn": [
                 {
                     "id": "0efdd665-c886-4ac9-b4ac-17183ee0d068",
@@ -233,6 +235,7 @@
         },
         "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2": {
             "id": "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2",
+            "expanded": false,
             "cn": [
                 {
                     "id": "e32f9d72-0305-4fee-b506-ab57b021ef82",
@@ -278,6 +281,7 @@
         },
         "e8aa058b-3164-442a-b710-ee0c56fc93c2": {
             "id": "e8aa058b-3164-442a-b710-ee0c56fc93c2",
+            "expanded": false,
             "cn": [
                 {
                     "id": "d0c6143a-9095-45ab-9cf5-c6918c264668",
@@ -358,11 +362,21 @@
                 }
             ]
         },
-        "af31130b-af5f-49b4-9781-2d95505d3b0d": {
-            "id": "af31130b-af5f-49b4-9781-2d95505d3b0d"
+        "b720b9a2-d1ae-47ec-b789-a77bad09c97e": {
+            "id": "b720b9a2-d1ae-47ec-b789-a77bad09c97e",
+            "cn": [
+                {
+                    "id": "e52397fb-a0da-4566-a5f9-c0bb66a00ff3"
+                }
+            ]
         },
-        "7b3854e7-3385-4ed1-8155-a2e502368646": {
-            "id": "7b3854e7-3385-4ed1-8155-a2e502368646"
+        "cf7b2848-dae4-4d86-97d7-9b29afbce4ac": {
+            "id": "cf7b2848-dae4-4d86-97d7-9b29afbce4ac",
+            "cn": [
+                {
+                    "id": "7b3854e7-3385-4ed1-8155-a2e502368646"
+                }
+            ]
         },
         "046a2eff-8f2e-4065-9160-89a38a578f9f": {
             "id": "046a2eff-8f2e-4065-9160-89a38a578f9f",
@@ -632,9 +646,6 @@
                     "id": "05e5ba95-f867-4746-ac55-a678b5c3f667"
                 },
                 {
-                    "id": "0c2300f7-eb31-447b-a2b2-3a8251b38ecf"
-                },
-                {
                     "id": "e44f9c6a-bf7d-415b-82ec-4ca321d57961"
                 },
                 {
@@ -668,8 +679,6 @@
             "application",
             "0ec2f1ad-921e-40de-b7bf-cefda33ba549",
             "9c64987c-bfa5-49e6-aa8c-7c960a5b96a2",
-            "7b3854e7-3385-4ed1-8155-a2e502368646",
-            "af31130b-af5f-49b4-9781-2d95505d3b0d",
             "672d8408-6860-4256-b613-9740f2efcbfb",
             "e4c1a7df-a085-4495-a99d-7cda7983bcac",
             "c48092ca-3c41-4a3c-9ad2-85e6d0e418d2",
@@ -677,7 +686,9 @@
             "b66ccb1c-a620-4e97-9078-9355e00e4582",
             "ab30c1fe-098b-4ec7-ba6e-feb6e1a99964",
             "9b485b85-aa46-4799-aa8e-19874d6b46b5",
-            "d9d5588d-f9c7-4dd5-a066-160e70ae699c"
+            "d9d5588d-f9c7-4dd5-a066-160e70ae699c",
+            "b720b9a2-d1ae-47ec-b789-a77bad09c97e",
+            "cf7b2848-dae4-4d86-97d7-9b29afbce4ac"
         ]
     },
     "canvasState": {
@@ -685,7 +696,7 @@
     },
     "inspectorState": {
         "topInstance": "3ccb6679-8c2d-472b-b718-088c1b120b25",
-        "selectedInstance": "c7c63098-2c9c-4a55-ba5a-1a9a723609da"
+        "selectedInstance": "1ad2b4cc-cca6-49f3-973a-a880b2f55179"
     },
     "codeState": {
         "topInstance": "3ccb6679-8c2d-472b-b718-088c1b120b25"

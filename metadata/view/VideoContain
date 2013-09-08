@@ -1,0 +1,29 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "VideoContain",
+        "designer|userAlias": "videocontain"
+    },
+    "designerId": "cf7b2848-dae4-4d86-97d7-9b29afbce4ac",
+    "cn": [
+        {
+            "type": "Ext.Video",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": [
+                    "BigBuck.m4v"
+                ]
+            },
+            "designerId": "7b3854e7-3385-4ed1-8155-a2e502368646"
+        }
+    ]
+}
